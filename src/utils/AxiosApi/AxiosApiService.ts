@@ -9,20 +9,20 @@ function isTokenExpired(token: string): boolean {
 
 export const handleRequestInterceptor = async (config: AxiosRequestConfig) => {
     // Retrieve token from localStorage or any other storage mechanism
-    const token = localStorage.getItem('authToken');
+    // const token = localStorage.getItem('authToken');
 
-    if (token) {
-        // Attach the token to the Authorization header
-        config.headers['Authorization'] = `Bearer ${token}`;
-    }
+    // if (token) {
+    //     // Attach the token to the Authorization header
+    //     config.headers['Authorization'] = `Bearer ${token}`;
+    // }
 
-    // Check token validity (optional)
-    if (token && isTokenExpired(token)) {
-        // Log out user if token is expired
-        localStorage.removeItem('authToken');
-        window.location.href = '/login'; // Redirect to login page
-        return Promise.reject(new Error('Token expired. Please log in again.'));
-    }
+    // // Check token validity (optional)
+    // if (token && isTokenExpired(token)) {
+    //     // Log out user if token is expired
+    //     localStorage.removeItem('authToken');
+    //     window.location.href = '/login'; // Redirect to login page
+    //     return Promise.reject(new Error('Token expired. Please log in again.'));
+    // }
 
     return config;
 }

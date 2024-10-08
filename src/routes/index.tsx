@@ -1,4 +1,4 @@
-import { LegacyDataDigitilization } from "../page";
+import ChatComponent from "../ChatComponent";
 
 export interface routeListProps {
   id: string | number;
@@ -9,7 +9,7 @@ export interface routeListProps {
 export const routeList: routeListProps[] = [
   {
     id: "ROUTE-1",
-    to: "/legacy-data-digitilization",
-    element: <LegacyDataDigitilization />,
+    to: "/chat",
+    element: <ChatComponent />,
   },
 ];

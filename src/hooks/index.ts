@@ -1,5 +1,2 @@
-import useLegacyDataDigitilization from "./LegacyDataDigitilization/useLegacyDataDigitilization.hook"
-
-export {
-    useLegacyDataDigitilization
-}
+export * from "./useBotResponse"
+export * from "./useChat"
