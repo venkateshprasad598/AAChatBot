@@ -26,13 +26,8 @@ const ChatApp = () => {
 
   return (
     <Layout className="min-h-screen flex flex-col">
-      {/* Navigation Bar */}
-      <Header className="bg-blue-500">
-        <div className="text-white text-lg">ChatGPT App</div>
-      </Header>
-
-      {/* Chat Room */}
       <Content className="flex-grow flex justify-center items-center bg-gray-100">
+        <div>ChatGPT App</div>
         <div className="bg-white w-full max-w-2xl rounded-lg shadow-lg p-4 flex flex-col">
           <div className="flex-grow overflow-auto p-4 space-y-4">
             {/* Display Messages */}
