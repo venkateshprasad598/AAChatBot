@@ -1,221 +1,76 @@
 import { theme } from "antd";
 const { defaultAlgorithm, darkAlgorithm } = theme;
 
-
 export const lightTheme = {
     algorithm: defaultAlgorithm,
     token: {
-        colorPrimary: "#c1a06a",
-        // colorBgBase: "#fff",
+        colorPrimary: "#c1a06a", // Main primary color
+        colorBgBase: "#ffffff", // Global background color
+        colorTextBase: "#000000", // Global text color
+        colorBgContainer: "#f7f7f7", // Lighter background for containers
     },
     components: {
         Input: {
-            colorBgContainer: "#464646",
-            hoverBg: "#464646",
-            activeBg: "#464646",
-            colorBgBase: "#fff",
+            colorBgContainer: "#ffffff",
+            hoverBg: "#eaeaea",
+            colorText: "#000000",
             borderRadius: 8,
-            activeBorderColor: "#c1a06a",
-            colorText: "#fff",
-            colorBorder: "transparent",
-            hoverBorderColor: "transparent",
-            boxShadow: "none",
-            activeShadow: "0",
         },
         Button: {
-            defaultBg: "#2C2C2C",
-            colorBorder: "transparent",
-            defaultShadow: "0px 1px 0px 0px rgba(0, 0, 0, 0.03)",
-            primaryShadow: "0px 1px 0px 0px rgba(0, 0, 0, 0.03)",
+            defaultBg: "#f0f0f0",
+            colorText: "#000000",
             borderRadius: 4,
-            dangerColor: "white",
-            paddingInlineLG: 20,
-            defaultGhostColor: "#fff",
-            defaultGhostBorderColor: "rgba(255, 255, 255, 0.10)",
-            boxShadow:
-                "0px 1px 0px 0px rgba(0, 0, 0, 0.03), 0px 4px 4px 0px rgba(0, 0, 0, 0.05), 0px 8px 8px 0px rgba(0, 0, 0, 0.05)",
-        },
-        Checkbox: {
-            borderRadiusSM: 0,
-            controlInteractiveSize: 24,
-            colorBgBase: "#2C2C2C",
-            colorBgContainer: "#2C2C2C",
-            colorBorder: "#fff",
-        },
-        Collapse: {
-            fontSizeIcon: 18,
-            headerBg: "transparent",
+            defaultShadow: "0px 1px 2px rgba(0, 0, 0, 0.1)",
         },
         Table: {
-            colorBgContainer: "#2C2C2C",
-            colorText: "#fff",
-            headerBg:
-                "linear-gradient(180deg, rgba(248, 248, 248, 0.00) 0%, rgba(248, 248, 248, 0.12) 100%)",
-            cellFontSize: 18,
-            headerSplitColor: "transparent",
-        },
-        Select: {
-            colorBgContainer: "#464646",
-            colorBorder: "none",
-            paddingContentVertical: 12,
-            padding: 12,
-            optionActiveBg: "#464646",
-            selectorBg: "#464646",
-            multipleItemBg: "#464646",
-            colorBgElevated: "#464646",
+            colorBgContainer: "#ffffff",
+            colorText: "#000000",
         },
         Modal: {
+            colorBgContainer: "#ffffff",
             titleFontSize: 24,
-            fontSizeIcon: 24,
-        },
-        Timeline: {
-            dotBorderWidth: 1,
-            tailColor: "#464646",
-            tailWidth: 1,
-        },
-        DatePicker: {
-            colorBgContainer: "#323232",
-            hoverBg: "#464646",
-            activeBg: "#464646",
-            colorBgBase: "#fff",
-            borderRadius: 8,
-            activeBorderColor: "#c1a06a",
-            colorText: "#fff",
-            colorBorder: "transparent",
-            hoverBorderColor: "transparent",
-            boxShadow: "none",
-            activeShadow: "0",
-        },
-        Slider: {
-            dotSize: 0,
-            controlSize: 16,
-            dotBorderColor: "transparent",
-            handleLineWidth: 0,
-            dotActiveBorderColor: "transparent",
-            trackBg: "#fff",
-            handleActiveColor: "transparent",
-            trackHoverBg: "#fff",
-        },
-        Radio: {
-            borderRadius: 4,
-            buttonCheckedBg: "#000",
-            buttonBg: "#464646",
-            buttonSolidCheckedActiveBg: "#fff",
-            buttonSolidCheckedHoverBg: "#fff",
-            buttonSolidCheckedBg: "#fff",
-            buttonSolidCheckedColor: "#000",
         },
         Tooltip: {
-            zIndexPopup: 1,
+            colorBgBase: "#ffffff",
+            colorText: "#000000",
         },
+        // Add other components similarly
     },
-}
+};
 
 export const darkTheme = {
     algorithm: darkAlgorithm,
     token: {
-        colorPrimary: "#c1a06a",
-        // colorBgBase: "#fff",
+        colorPrimary: "#c1a06a", // Primary color with high contrast
+        colorBgBase: "#1a1a1a", // Global dark background
+        colorTextBase: "#ffffff", // White text for better contrast
+        colorBgContainer: "#2c2c2c", // Darker background for containers
     },
     components: {
         Input: {
-            colorBgContainer: "#464646",
-            hoverBg: "#464646",
-            activeBg: "#464646",
-            colorBgBase: "#fff",
+            colorBgContainer: "#2c2c2c",
+            hoverBg: "#3c3c3c",
+            colorText: "#ffffff",
             borderRadius: 8,
-            activeBorderColor: "#c1a06a",
-            colorText: "#fff",
-            colorBorder: "transparent",
-            hoverBorderColor: "transparent",
-            boxShadow: "none",
-            activeShadow: "0",
         },
         Button: {
-            defaultBg: "#2C2C2C",
-            colorBorder: "transparent",
-            defaultShadow: "0px 1px 0px 0px rgba(0, 0, 0, 0.03)",
-            primaryShadow: "0px 1px 0px 0px rgba(0, 0, 0, 0.03)",
+            defaultBg: "#464646",
+            colorText: "#ffffff",
             borderRadius: 4,
-            dangerColor: "white",
-            paddingInlineLG: 20,
-            defaultGhostColor: "#fff",
-            defaultGhostBorderColor: "rgba(255, 255, 255, 0.10)",
-            boxShadow:
-                "0px 1px 0px 0px rgba(0, 0, 0, 0.03), 0px 4px 4px 0px rgba(0, 0, 0, 0.05), 0px 8px 8px 0px rgba(0, 0, 0, 0.05)",
-        },
-        Checkbox: {
-            borderRadiusSM: 0,
-            controlInteractiveSize: 24,
-            colorBgBase: "#2C2C2C",
-            colorBgContainer: "#2C2C2C",
-            colorBorder: "#fff",
-        },
-        Collapse: {
-            fontSizeIcon: 18,
-            headerBg: "transparent",
+            defaultShadow: "0px 1px 2px rgba(255, 255, 255, 0.1)",
         },
         Table: {
-            colorBgContainer: "#2C2C2C",
-            colorText: "#fff",
-            headerBg:
-                "linear-gradient(180deg, rgba(248, 248, 248, 0.00) 0%, rgba(248, 248, 248, 0.12) 100%)",
-            cellFontSize: 18,
-            headerSplitColor: "transparent",
-        },
-        Select: {
-            colorBgContainer: "#464646",
-            colorBorder: "none",
-            paddingContentVertical: 12,
-            padding: 12,
-            optionActiveBg: "#464646",
-            selectorBg: "#464646",
-            multipleItemBg: "#464646",
-            colorBgElevated: "#464646",
+            colorBgContainer: "#2c2c2c",
+            colorText: "#ffffff",
         },
         Modal: {
-            titleFontSize: 24,
-            fontSizeIcon: 24,
-        },
-        Timeline: {
-            dotBorderWidth: 1,
-            tailColor: "#464646",
-            tailWidth: 1,
-        },
-        DatePicker: {
             colorBgContainer: "#323232",
-            hoverBg: "#464646",
-            activeBg: "#464646",
-            colorBgBase: "#fff",
-            borderRadius: 8,
-            activeBorderColor: "#c1a06a",
-            colorText: "#fff",
-            colorBorder: "transparent",
-            hoverBorderColor: "transparent",
-            boxShadow: "none",
-            activeShadow: "0",
-        },
-        Slider: {
-            dotSize: 0,
-            controlSize: 16,
-            dotBorderColor: "transparent",
-            handleLineWidth: 0,
-            dotActiveBorderColor: "transparent",
-            trackBg: "#fff",
-            handleActiveColor: "transparent",
-            trackHoverBg: "#fff",
-        },
-        Radio: {
-            borderRadius: 4,
-            buttonCheckedBg: "#000",
-            buttonBg: "#464646",
-            buttonSolidCheckedActiveBg: "#fff",
-            buttonSolidCheckedHoverBg: "#fff",
-            buttonSolidCheckedBg: "#fff",
-            buttonSolidCheckedColor: "#000",
+            titleFontSize: 24,
         },
         Tooltip: {
-            zIndexPopup: 1,
+            colorBgBase: "#2c2c2c",
+            colorText: "#ffffff",
         },
+        // Add other components similarly
     },
-}
+};
