@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Input, Button, Layout, Avatar } from "antd";
 import { SendOutlined, UserOutlined, RobotOutlined } from "@ant-design/icons";
+import profileOne from "./../assets/images/avatar/profile-one.jpg";
 import "tailwindcss/tailwind.css";
 
 const { Header, Content, Footer } = Layout;
@@ -27,12 +28,17 @@ const ChatApp = () => {
   return (
     <Layout className="min-h-screen flex flex-col">
       {/* Navigation Bar */}
-      <Header className="bg-blue-500">
-        <div className="text-white text-lg">ChatGPT App</div>
+      <Header className="bg-blue-500 header">
+        <h2 className="text-white text-lg">ChatBot</h2>
+        <div className="ml-auto">
+          <div className="profile-pic">
+            <img src={profileOne}/>
+          </div>
+        </div>
       </Header>
 
       {/* Chat Room */}
-      <Content className="flex-grow flex justify-center items-center bg-gray-100">
+      <Content className="flex-grow flex justify-center items-center bg-gray-100 content-area">
         <div className="bg-white w-full max-w-2xl rounded-lg shadow-lg p-4 flex flex-col">
           <div className="flex-grow overflow-auto p-4 space-y-4">
             {/* Display Messages */}

@@ -17,7 +17,7 @@ const ChatComponent: React.FC = () => {
   };
 
   return (
-    <div style={{ padding: "20px", maxWidth: "600px", margin: "0 auto" }}>
+    <div style={{ padding: "20px", maxWidth: "600px", margin: "0 auto" }} className="w-full">
       {/* Display Chat Messages (User and Bot sequentially) */}
       {chatMessages.map((msg, index) => (
         <div key={index} style={{ marginBottom: "10px" }}>
