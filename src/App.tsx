@@ -1,12 +1,12 @@
-import { ConfigProvider, Switch } from "antd";
-import React, { Suspense, useState } from "react";
+import { ConfigProvider } from "antd";
+import { Suspense, useState } from "react";
 import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
 import "./App.css";
+import { ErrorBoundary } from "./components/ErrorBoundary";
 import Layout from "./layout/Layout";
 import { routeList, routeListProps } from "./routes";
 import { configProvider, darkTheme, lightTheme } from "./utils";
-import { ErrorBoundary } from "./components/ErrorBoundary";
-import ChatApp from "./components/ChatApp";
+import { LoginForm } from "./components/login";
 
 function App() {
   const [isDarkMode, setIsDarkMode] = useState(false);
@@ -25,22 +25,8 @@ function App() {
           >
             <Router>
               <Routes>
-                <Route
-                  path="/"
-                  element={
-                    <>
-                      <ChatApp />
-                      <div style={{ marginBottom: "16px" }}>
-                        <Switch
-                          checked={isDarkMode}
-                          onChange={toggleTheme}
-                          checkedChildren="Dark"
-                          unCheckedChildren="Light"
-                        />
-                      </div>
-                    </>
-                  }
-                />
+                <Route path="/" element={<h1>Hi</h1>} />
+                <Route path="/login" element={<LoginForm />} />
                 <Route element={<Layout />}>
                   {routeList.map((route: routeListProps) => (
                     <Route
