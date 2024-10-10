@@ -7,6 +7,7 @@ import Layout from "./layout/Layout";
 import { routeList, routeListProps } from "./routes";
 import { configProvider, darkTheme, lightTheme } from "./utils";
 import { LoginForm } from "./components/login";
+import ChatApp from "./components/ChatApp";
 
 function App() {
   const [isDarkMode, setIsDarkMode] = useState(false);
@@ -25,7 +26,7 @@ function App() {
           >
             <Router>
               <Routes>
-                <Route path="/" element={<h1>Hi</h1>} />
+                <Route path="/" element={<ChatApp/>} />
                 <Route path="/login" element={<LoginForm />} />
                 <Route element={<Layout />}>
                   {routeList.map((route: routeListProps) => (
