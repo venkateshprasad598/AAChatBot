@@ -1,12 +1,12 @@
 import React from "react";
-import "./AskQuestion.css";
+import "./PromptMessage.css";
 
-interface AskQuestionProps {
+interface PromptMessageProps {
   userName: string;
   userQuestion: string;
 }
 
-export const AskQuestion: React.FC<AskQuestionProps> = ({
+export const PromptMessage: React.FC<PromptMessageProps> = ({
   userName,
   userQuestion,
 }) => {

@@ -3,12 +3,12 @@ import { appBaseUrlInstance } from "../utils/AxiosApi/AxiosApi";
 // Define API endpoints
 const API_BASE = '/api/dynamic-response';
 
-export const getBotResponse = async (payload: any) => {
+export const getBotResponse = async (params: any) => {
     try {
         const response = await appBaseUrlInstance({
             method: "POST",
             url: API_BASE,
-            data: payload,
+            params: params,
         });
         return response;
     } catch (error) {

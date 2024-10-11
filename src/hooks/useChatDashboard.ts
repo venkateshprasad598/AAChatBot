@@ -1,19 +1,20 @@
 // hooks/useChat.ts
 import { useState } from "react";
 import { useBotResponse } from "./useBotResponse";
+import { ChatMessage } from "../types";
 
-interface ChatMessage {
-    sender: "user" | "bot";
-    text?: string;
-    buttons?: {
-        button1?: { label: string; payload: string };
-        button2?: { label: string; payload: string };
-    };
-}
-
-export const useChat = () => {
-    const [chatMessages, setChatMessages] = useState<ChatMessage[]>([]);
+export const useChatDashboard = () => {
     const { loading, error, fetchBotResponse } = useBotResponse();
+    const [chatMessages, setChatMessages] = useState<ChatMessage[]>([]);
+    const [isToggle, setIsToggle] = useState(false);
+
+    const showBox = () => {
+        setIsToggle(true);
+    };
+
+    const hideBox = () => {
+        setIsToggle(false);
+    };
 
     const handleUserMessage = async (message: string) => {
         // Add user message to chat
@@ -47,5 +48,8 @@ export const useChat = () => {
         error,
         handleUserMessage,
         handleButtonClick,
+        showBox,
+        hideBox,
+        isToggle
     };
 };

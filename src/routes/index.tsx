@@ -1,5 +1,6 @@
 import ChatComponent from "../ChatComponent";
 import ForceGraph from "../components/graph/ForceGraph";
+import { ChatDashboard } from "../page";
 
 export interface routeListProps {
   id: string | number;
@@ -10,11 +11,16 @@ export interface routeListProps {
 export const routeList: routeListProps[] = [
   {
     id: "ROUTE-1",
+    to: "/",
+    element: <ChatDashboard />,
+  },
+  {
+    id: "ROUTE-2",
     to: "/chat",
     element: <ChatComponent />,
   },
   {
-    id: "ROUTE-2",
+    id: "ROUTE-3",
     to: "/graph",
     element: <ForceGraph />,
   },

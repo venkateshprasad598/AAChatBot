@@ -1,32 +1,21 @@
 import { ConfigProvider } from "antd";
-import { Suspense, useState } from "react";
+import { Suspense } from "react";
 import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
+import "./App.css";
 import { ErrorBoundary } from "./components/ErrorBoundary";
+import { LoginForm } from "./components/login";
 import Layout from "./layout/Layout";
 import { routeList, routeListProps } from "./routes";
-import { configProvider, darkTheme, lightTheme } from "./utils";
-import { LoginForm } from "./components/login";
-import { ChatApp } from "./page";
-import "./App.css";
+import { configProvider, lightTheme } from "./utils";
 
 function App() {
-  const [isDarkMode, setIsDarkMode] = useState(false);
-
-  const toggleTheme = (checked: boolean) => {
-    setIsDarkMode(checked);
-  };
-
   return (
     <>
       <ErrorBoundary>
         <Suspense fallback={<>Loading</>}>
-          <ConfigProvider
-            {...configProvider}
-            theme={isDarkMode ? darkTheme : lightTheme}
-          >
+          <ConfigProvider {...configProvider} theme={lightTheme}>
             <Router>
               <Routes>
-                <Route path="/" element={<ChatApp />} />
                 <Route path="/login" element={<LoginForm />} />
                 <Route element={<Layout />}>
                   {routeList.map((route: routeListProps) => (

@@ -1,8 +1,4 @@
 import { lazy } from "react";
+const ChatDashboard = lazy(() => import("./Dashboard/ChatDashboard"));
 
-const LegacyDataDigitilization = lazy(
-  () => import("./LegacyDataDigitilization/LegacyDataDigitilization")
-);
-const ChatApp = lazy(() => import("./ChatApp/ChatApp"));
-
-export { LegacyDataDigitilization, ChatApp };
+export { ChatDashboard };

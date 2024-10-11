@@ -16,26 +16,27 @@ const items: MenuProps["items"] = [
 export const Header = () => {
   return (
     <>
-      {/* Navigation Bar */}
       <header className="header flex items-center justify-between">
         <div className="flex items-center gap-2">
-          <h2 className="text-nose text-md font-medium mb-0">ChatBot</h2>
+          <h2 className="text-nose text-md font-medium mb-0">
+            Alfred Assistance
+          </h2>
           <div className="flex items-center justify-center w-[30px] h-[30px] rounded-full overflow-hidden flex items-center justify-center profile-icon">
             {/* <img src={profileOne} className="w-full h-full object-cover" /> */}
             <h5 className="text-nose font-bold text-xs mb-0 text-white">GM</h5>
           </div>
         </div>
-        <Dropdown menu={{ items }} className="cursor-pointer">
+        {/* <Dropdown menu={{ items }} className="cursor-pointer">
           <a onClick={(e) => e.preventDefault()}>
             <Space className="font-normal text-md text-nose">
               Visualization Examples Requested
               <DownOutlined />
             </Space>
           </a>
-        </Dropdown>
+        </Dropdown> */}
         <div className="flex items-center justify-center w-[30px] h-[30px] rounded-full overflow-hidden flex items-center justify-center profile-icon">
-          <img src={profileOne} className="w-full h-full object-cover" />
-          {/* <h5 className="text-nose font-bold text-xs mb-0 text-white">GM</h5> */}
+          {/* <img src={profileOne} className="w-full h-full object-cover" /> */}
+          <h5 className="text-nose font-bold text-xs mb-0 text-white">TL</h5>
         </div>
       </header>
     </>
