@@ -1,0 +1,32 @@
+:root {
+  /* default */
+  --primary-font-family: "Poppins";
+  --header-height: 50px;
+  --bg-000: 60 6.7% 97.1%;
+  --bg-100: 50 23.1% 94.9%;
+  --bg-200: 49 26.8% 92%;
+  --bg-300: 49 25.8% 87.8%;
+  --bg-400: 46 28.3% 82%;
+  --bg-500: 47 27% 71%;
+  /* theme color */
+  --white: #fff;
+  --body: #f1f0e9;
+  --body-secondary: #f1f1f163;
+  --body-nose: #f2e9e94d;
+  --nose: #000;
+  --birch: #3d3929;
+  --secluded-green: #706b5780;
+  --smoke-tree: #ba5b38;
+}
+
+.dark {
+  /* theme color */
+  --white: #000;
+  --body: #f1f0e9;
+  --body-secondary: #f1f1f163;
+  --body-nose: #f2e9e94d;
+  --nose: #000;
+  --birch: #3d3929;
+  --secluded-green: #706b5780;
+  --smoke-tree: #ba5b38;
+}

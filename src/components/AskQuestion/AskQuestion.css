@@ -1,0 +1,16 @@
+.send-msg {
+  min-height: calc(var(--header-height) + 50px);
+  max-height: calc(100vh - var(--header-height) - 100px);
+  height: auto;
+  max-width: 720px;
+  border-radius: 15px 15px 0 0;
+}
+.send-msg:hover {
+  border-color: var(--secluded-green);
+}
+.send-btn {
+  background-color: var(--smoke-tree);
+}
+.send-btn:hover {
+  background-color: var(--nose);
+}

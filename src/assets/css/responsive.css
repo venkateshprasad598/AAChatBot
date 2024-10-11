@@ -1,0 +1,38 @@
+@media (max-width: 1599px) {
+  .main-box-transform,
+  .main-box-transform .send-msg,
+  .show-box-transform {
+    max-width: calc(50% - 5%);
+  }
+}
+@media (max-width: 1439px) {
+  .main-box-transform,
+  .main-box-transform .send-msg,
+  .show-box-transform {
+    max-width: calc(50% - 3%);
+  }
+}
+
+@media (max-width: 1365px) {
+  .main-box-transform,
+  .main-box-transform .send-msg,
+  .show-box-transform {
+    max-width: calc(50% - 2%);
+  }
+}
+
+@media (max-width: 1199px) {
+  .main-box-transform,
+  .main-box-transform .send-msg,
+  .show-box-transform {
+    max-width: calc(50% - 15px);
+  }
+}
+
+@media (max-width: 991px) {
+  .main-box-transform,
+  .main-box-transform .send-msg,
+  .show-box-transform {
+    max-width: calc(50% - 10px);
+  }
+}
