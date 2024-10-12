@@ -964,3 +964,321 @@ export const dummyNodes = {
     ],
     "relationships": []
 }
+
+export const apiResponse = {
+    "response_id": "121dbd27-ed8a-449f-abb8-e21786b4837f",
+    "response": [
+        {
+            "markdown_text": "Hi, Excited to chat"
+        },
+        {
+            "buttons": {
+                "button1": {
+                    "label": "Yes",
+                    "payload": "Yes, I want this: 0.6628455798212751"
+                },
+                "button2": {
+                    "label": "No",
+                    "payload": "No, I don't want this: 0.7491683557126406"
+                }
+            }
+        },
+        {
+            "chart_html": "<div>Chart data: [0.9203473216509381, 0.6999509690156519, 0.5007740484339639, 0.6687968725668948, 0.083287129767731]</div>"
+        },
+        {
+            "image": "data:image/png;base64,37c8f1f87336a836c133c9e487559452e0af88923271893846fcbe63ece78d1d9ca1e777af4683d07718327ef1ca9abe78f1"
+        },
+        {
+            "knowledge_graph": {
+                "nodes": [
+                    {
+                        "id": "4:a15b1f98-3d8a-4761-a1be-dd0d7bb84ade:30550",
+                        "label": [
+                            "PoliceInvolvement"
+                        ],
+                        "properties": {
+                            "ActionByPolice": "",
+                            "PoliceArrangement": ""
+                        }
+                    },
+                    {
+                        "id": "4:a15b1f98-3d8a-4761-a1be-dd0d7bb84ade:30592",
+                        "label": [
+                            "Event"
+                        ],
+                        "properties": {
+                            "RouteDistanceMax": "10",
+                            "RouteDistanceMin": "10",
+                            "NatureOfEvent": "test3456",
+                            "Note": "test3456<br>",
+                            "ExpectMinStrength": 10,
+                            "id": 2722,
+                            "ExpectMaxStrength": 111
+                        }
+                    },
+                    {
+                        "id": "4:a15b1f98-3d8a-4761-a1be-dd0d7bb84ade:29660",
+                        "label": [
+                            "Route"
+                        ],
+                        "properties": {
+                            "createdAt": "2024-05-11 07:01:22.220000",
+                            "IsActive": "1",
+                            "name": " Chhaajee Building ",
+                            "id": 68
+                        }
+                    },
+                    {
+                        "id": "4:a15b1f98-3d8a-4761-a1be-dd0d7bb84ade:30551",
+                        "label": [
+                            "Remarks"
+                        ],
+                        "properties": {
+                            "remarks": ""
+                        }
+                    },
+                    {
+                        "id": "4:a15b1f98-3d8a-4761-a1be-dd0d7bb84ade:28122",
+                        "label": [
+                            "Person"
+                        ],
+                        "properties": {
+                            "profession": "nan",
+                            "createdAt": "2024-08-27 19:09:52.970000",
+                            "address": "nan",
+                            "IsActive": "1.0",
+                            "name": " Ashok Kumar, ",
+                            "designation": " president ",
+                            "id": 1816,
+                            "phoneno": "9717635815"
+                        }
+                    },
+                    {
+                        "id": "4:a15b1f98-3d8a-4761-a1be-dd0d7bb84ade:28158",
+                        "label": [
+                            "Person"
+                        ],
+                        "properties": {
+                            "profession": "nan",
+                            "createdAt": "2024-08-30 18:35:45.350000",
+                            "address": "nan",
+                            "IsActive": "1.0",
+                            "name": " Dr. Manish Prashakar",
+                            "designation": "National President",
+                            "id": 1852,
+                            "phoneno": "9015680533"
+                        }
+                    },
+                    {
+                        "id": "4:a15b1f98-3d8a-4761-a1be-dd0d7bb84ade:28732",
+                        "label": [
+                            "Venue"
+                        ],
+                        "properties": {
+                            "createdAt": "2024-07-08 17:03:05.580000",
+                            "IsActive": "1",
+                            "name": " 2nd Floor, Yusuf Sadan, No.1, Ashok Place, Gole Dak Khana, New Delhi",
+                            "id": 1336
+                        }
+                    },
+                    {
+                        "id": "4:a15b1f98-3d8a-4761-a1be-dd0d7bb84ade:30283",
+                        "label": [
+                            "Route"
+                        ],
+                        "properties": {
+                            "createdAt": "2024-08-29 16:47:25.560000",
+                            "IsActive": "1",
+                            "name": " Noor Masjid, Mustafabad, Delhi",
+                            "id": 697
+                        }
+                    },
+                    {
+                        "id": "4:a15b1f98-3d8a-4761-a1be-dd0d7bb84ade:30594",
+                        "label": [
+                            "Demand"
+                        ],
+                        "properties": {
+                            "demand": "test3456<br>"
+                        }
+                    },
+                    {
+                        "id": "4:a15b1f98-3d8a-4761-a1be-dd0d7bb84ade:27158",
+                        "label": [
+                            "Organization"
+                        ],
+                        "properties": {
+                            "createdAt": "2024-09-03 18:46:07.180000",
+                            "address": "Ailrsa Bhawan, H. No. 333, Bhoor Bharat Nagar, Ghaziabad",
+                            "IsActive": "1",
+                            "name": " All India Loco Running Staff Association (not affiliated)",
+                            "id": 553
+                        }
+                    },
+                    {
+                        "id": "4:a15b1f98-3d8a-4761-a1be-dd0d7bb84ade:30593",
+                        "label": [
+                            "Date"
+                        ],
+                        "properties": {
+                            "date": "2024-10-10"
+                        }
+                    },
+                    {
+                        "id": "4:a15b1f98-3d8a-4761-a1be-dd0d7bb84ade:28066",
+                        "label": [
+                            "Person"
+                        ],
+                        "properties": {
+                            "profession": "nan",
+                            "createdAt": "2024-08-21 17:46:26.760000",
+                            "address": "nan",
+                            "IsActive": "1.0",
+                            "name": " Anil Samaspur",
+                            "designation": "convenor",
+                            "id": 1760,
+                            "phoneno": "9873859436"
+                        }
+                    },
+                    {
+                        "id": "4:a15b1f98-3d8a-4761-a1be-dd0d7bb84ade:30538",
+                        "label": [
+                            "Section"
+                        ],
+                        "properties": {
+                            "createdAt": "2023-11-03 10:33:47.287000",
+                            "IsActive": "1",
+                            "name": "Political",
+                            "id": 1,
+                            "Printorderby": "1"
+                        }
+                    },
+                    {
+                        "id": "4:a15b1f98-3d8a-4761-a1be-dd0d7bb84ade:28189",
+                        "label": [
+                            "Person"
+                        ],
+                        "properties": {
+                            "profession": "nan",
+                            "createdAt": "2024-09-04 11:24:46.870000",
+                            "address": "Punch City, Jammu & Kashmir",
+                            "IsActive": "nan",
+                            "name": " Fahim Miya",
+                            "id": 1883,
+                            "designation": "nan",
+                            "phoneno": "nan"
+                        }
+                    },
+                    {
+                        "id": "4:a15b1f98-3d8a-4761-a1be-dd0d7bb84ade:30595",
+                        "label": [
+                            "Document"
+                        ],
+                        "properties": {
+                            "data": "{'event': {'SectionDataId': 2722, 'StartEventDate': '2024-10-10 13:41', 'EndEventDate': '2024-10-10 13:42', 'EventStartTime': ' 13:41', 'EventEndTime': ' 13:42', 'UserId': 29, 'UserName': 'santoshky@sbdelhi.com', 'VenuId': 1336, 'VenuName': ' 2nd Floor, Yusuf Sadan, No.1, Ashok Place, Gole Dak Khana, New Delhi', 'RouteStart': ' Chhaajee Building ', 'RouteStartId': 68, 'RouteEnd': ' Noor Masjid, Mustafabad, Delhi', 'RouteEndId': 697, 'ExpectMinStrength': 10, 'ExpectMaxStrength': 111, 'OrganizationId': 553, 'OrganizationName': ' All India Loco Running Staff Association (not affiliated)', 'Note': '<p>test3456<br></p>', 'NatureOfEvent': '<p>test3456</p>', 'Demands': '<p>test3456<br></p>', 'SectionName': 'Political', 'RouteDistanceMin': 10, 'RouteDistanceMax': 12, 'PoliceArrangement': '', 'ActionByPolice': '', 'Remarks': '', 'SectionID': '1', 'Status': 'Update', 'RouteMid': [{'Routemidname': ' Chhaajee Building '}, {'Routemidname': ' Noor Masjid, Mustafabad, Delhi'}], 'RouteMidId': [{'Routemidid': 68}, {'Routemidid': 697}], 'MainLeader': [{'Name': ' Ashok Kumar, ', 'OrganizationName': 'All India Scheduled Castes & Scheduled Tribes Railway Employees Association (Not affiliated)'}], 'MainLeaderIdorgId': [{'Leaderid': 1816, 'OrganizationId': 1816}], 'OtherLeaders': [{'Name': ' Dr. Manish Prashakar', 'OrganizationName': 'Federation of All India Medical Association (FAIMA)'}, {'Name': ' Fahim Miya', 'OrganizationName': 'National Jammu Kashmir Muslim Education Front'}], 'OtherLeadersIdorgId': [{'Leaderid': 1852, 'OrganizationId': 534}, {'Leaderid': 1883, 'OrganizationId': 556}], 'Organizer': [{'Name': ' Anil Samaspur', 'OrganizationName': ' MCD Sanyukt Morch Najafgarh Zone'}], 'OrganizerId': [{'Leaderid': 1760, 'OrganizationId': 471}]}, 'topic': 'db_events'}"
+                        }
+                    }
+                ],
+                "relationships": [
+                    {
+                        "id": "5:a15b1f98-3d8a-4761-a1be-dd0d7bb84ade:45154",
+                        "type": "HAS_POLICEINVOLVEMENT",
+                        "source": "4:a15b1f98-3d8a-4761-a1be-dd0d7bb84ade:30592",
+                        "target": "4:a15b1f98-3d8a-4761-a1be-dd0d7bb84ade:30550"
+                    },
+                    {
+                        "id": "5:a15b1f98-3d8a-4761-a1be-dd0d7bb84ade:45151",
+                        "type": "HAS_MIDPOINTS",
+                        "source": "4:a15b1f98-3d8a-4761-a1be-dd0d7bb84ade:30592",
+                        "target": "4:a15b1f98-3d8a-4761-a1be-dd0d7bb84ade:29660"
+                    },
+                    {
+                        "id": "5:a15b1f98-3d8a-4761-a1be-dd0d7bb84ade:45149",
+                        "type": "HAS_STARTROUTE",
+                        "source": "4:a15b1f98-3d8a-4761-a1be-dd0d7bb84ade:30592",
+                        "target": "4:a15b1f98-3d8a-4761-a1be-dd0d7bb84ade:29660"
+                    },
+                    {
+                        "id": "5:a15b1f98-3d8a-4761-a1be-dd0d7bb84ade:45155",
+                        "type": "HAS_REMARK",
+                        "source": "4:a15b1f98-3d8a-4761-a1be-dd0d7bb84ade:30592",
+                        "target": "4:a15b1f98-3d8a-4761-a1be-dd0d7bb84ade:30551"
+                    },
+                    {
+                        "id": "5:a15b1f98-3d8a-4761-a1be-dd0d7bb84ade:45144",
+                        "type": "HAS_PERSON",
+                        "source": "4:a15b1f98-3d8a-4761-a1be-dd0d7bb84ade:30592",
+                        "target": "4:a15b1f98-3d8a-4761-a1be-dd0d7bb84ade:28122"
+                    },
+                    {
+                        "id": "5:a15b1f98-3d8a-4761-a1be-dd0d7bb84ade:45146",
+                        "type": "HAS_PERSON",
+                        "source": "4:a15b1f98-3d8a-4761-a1be-dd0d7bb84ade:30592",
+                        "target": "4:a15b1f98-3d8a-4761-a1be-dd0d7bb84ade:28158"
+                    },
+                    {
+                        "id": "5:a15b1f98-3d8a-4761-a1be-dd0d7bb84ade:45148",
+                        "type": "HAS_VENUE",
+                        "source": "4:a15b1f98-3d8a-4761-a1be-dd0d7bb84ade:30592",
+                        "target": "4:a15b1f98-3d8a-4761-a1be-dd0d7bb84ade:28732"
+                    },
+                    {
+                        "id": "5:a15b1f98-3d8a-4761-a1be-dd0d7bb84ade:45156",
+                        "type": "HAS_MIDPOINTS",
+                        "source": "4:a15b1f98-3d8a-4761-a1be-dd0d7bb84ade:30592",
+                        "target": "4:a15b1f98-3d8a-4761-a1be-dd0d7bb84ade:30283"
+                    },
+                    {
+                        "id": "5:a15b1f98-3d8a-4761-a1be-dd0d7bb84ade:45152",
+                        "type": "HAS_DEMANDS",
+                        "source": "4:a15b1f98-3d8a-4761-a1be-dd0d7bb84ade:30592",
+                        "target": "4:a15b1f98-3d8a-4761-a1be-dd0d7bb84ade:30594"
+                    },
+                    {
+                        "id": "5:a15b1f98-3d8a-4761-a1be-dd0d7bb84ade:45147",
+                        "type": "HAS_ORGANIZATION",
+                        "source": "4:a15b1f98-3d8a-4761-a1be-dd0d7bb84ade:30592",
+                        "target": "4:a15b1f98-3d8a-4761-a1be-dd0d7bb84ade:27158"
+                    },
+                    {
+                        "id": "5:a15b1f98-3d8a-4761-a1be-dd0d7bb84ade:45143",
+                        "type": "HAS_DATE",
+                        "source": "4:a15b1f98-3d8a-4761-a1be-dd0d7bb84ade:30592",
+                        "target": "4:a15b1f98-3d8a-4761-a1be-dd0d7bb84ade:30593"
+                    },
+                    {
+                        "id": "5:a15b1f98-3d8a-4761-a1be-dd0d7bb84ade:45145",
+                        "type": "HAS_ORGANIZER",
+                        "source": "4:a15b1f98-3d8a-4761-a1be-dd0d7bb84ade:30592",
+                        "target": "4:a15b1f98-3d8a-4761-a1be-dd0d7bb84ade:28066"
+                    },
+                    {
+                        "id": "5:a15b1f98-3d8a-4761-a1be-dd0d7bb84ade:45150",
+                        "type": "HAS_ENDROUTE",
+                        "source": "4:a15b1f98-3d8a-4761-a1be-dd0d7bb84ade:30592",
+                        "target": "4:a15b1f98-3d8a-4761-a1be-dd0d7bb84ade:30283"
+                    },
+                    {
+                        "id": "5:a15b1f98-3d8a-4761-a1be-dd0d7bb84ade:45153",
+                        "type": "HAS_EVENT",
+                        "source": "4:a15b1f98-3d8a-4761-a1be-dd0d7bb84ade:30538",
+                        "target": "4:a15b1f98-3d8a-4761-a1be-dd0d7bb84ade:30592"
+                    },
+                    {
+                        "id": "5:a15b1f98-3d8a-4761-a1be-dd0d7bb84ade:45157",
+                        "type": "HAS_PERSON",
+                        "source": "4:a15b1f98-3d8a-4761-a1be-dd0d7bb84ade:30592",
+                        "target": "4:a15b1f98-3d8a-4761-a1be-dd0d7bb84ade:28189"
+                    },
+                    {
+                        "id": "5:a15b1f98-3d8a-4761-a1be-dd0d7bb84ade:44812",
+                        "type": "MENTIONS",
+                        "source": "4:a15b1f98-3d8a-4761-a1be-dd0d7bb84ade:30595",
+                        "target": "4:a15b1f98-3d8a-4761-a1be-dd0d7bb84ade:30592"
+                    }
+                ]
+            }
+        }
+    ]
+}

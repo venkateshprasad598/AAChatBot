@@ -1,7 +1,8 @@
 // hooks/useChat.ts
 import { useState } from "react";
-import { useBotResponse } from "./useBotResponse";
 import { ChatMessage } from "../types";
+import { useBotResponse } from "./useBotResponse";
+import { apiResponse } from "../constants/common.cont";
 
 export const useChatDashboard = () => {
     const { loading, error, fetchBotResponse } = useBotResponse();
@@ -21,20 +22,20 @@ export const useChatDashboard = () => {
         setChatMessages((prev) => [...prev, { sender: "user", text: message }]);
 
         // Fetch bot response
-        const result = await fetchBotResponse(message);
+        // const result = await fetchBotResponse(message);
+        const result = apiResponse.response;
 
-        // Add bot response to chat
         if (result) {
-            result.forEach((res: any) => {
-                setChatMessages((prev) => [
-                    ...prev,
-                    {
-                        sender: "bot",
-                        text: res.markdown_text,
-                        buttons: res.buttons,
-                    },
-                ]);
-            });
+            const botMessage = result.reduce(
+                (acc: any, res: any) => ({
+                    ...acc,
+                    ...res,
+                    sender: "bot",
+                }),
+                { sender: "bot" }
+            );
+
+            setChatMessages((prev) => [...prev, botMessage]);
         }
     };
 
