@@ -45,8 +45,8 @@ const Conversations = ({
         if (message.sender === "bot") {
           return (
             <div className="w-full h-full mb-[15px]">
-              <div className="bg-white px-3 py-3 rounded-xl max-w-[75ch] shadow-[0_2px_16px_rgba(0,0,0,0.025)] min-w-[16ch] min-h-[5ch] border replay-msg text-sm text-nose tracking-wider flex flex-col gap-3">
-                <div key={index} className="bot-response">
+              <div className="bg-white px-3 py-3 rounded-xl max-w-[100%] shadow-[0_2px_16px_rgba(0,0,0,0.025)] min-w-[16ch] min-h-[5ch] border replay-msg text-sm text-nose tracking-wider flex flex-col gap-3">
+                <div key={index} className="bot-response flex flex-col gap-3">
                   {message.markdown_text && (
                     <ResponseMessage userQuestion={message.markdown_text} />
                   )}
@@ -57,7 +57,7 @@ const Conversations = ({
                     />
                   )} */}
 
-                  {message.image && <GraphViewer showBox={showBox} />}
+                  {message.image && <GraphViewer showBox={showBox} codeViewIcon={false} />}
 
                   <div onClick={() => handleMediaViewer("graph", message)}>
                     Graph
@@ -65,17 +65,17 @@ const Conversations = ({
                   <div onClick={() => handleMediaViewer("image", message)}>
                     Image
                   </div>
-                  <GraphViewer showBox={showBox} />
+                  <GraphViewer codeViewIcon={true} showBox={showBox} />
 
                   {message.buttons && (
-                    <div className="button-group flex gap-2 mt-[15px] ">
+                    <div className="button-group flex gap-2 justify-end flex-wrap">
                       {message.buttons.button1 && (
-                        <Button type="primary" className="btn">
+                        <Button type="primary" className="btn btn-green-border">
                           {message.buttons.button1.label}
                         </Button>
                       )}
                       {message.buttons.button2 && (
-                        <Button type="primary" className="btn">
+                        <Button type="primary" className="btn btn-green-border btn-red-border">
                           {message.buttons.button2.label}
                         </Button>
                       )}

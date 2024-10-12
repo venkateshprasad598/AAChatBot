@@ -9,8 +9,8 @@
   border-color: var(--secluded-green);
 }
 .send-btn {
-  background-color: var(--smoke-tree);
+  background-color: var(--nose);
 }
 .send-btn:hover {
-  background-color: var(--nose);
+  opacity: 80%;
 }

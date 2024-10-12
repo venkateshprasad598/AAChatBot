@@ -14,9 +14,13 @@
   --body-secondary: #f1f1f163;
   --body-nose: #f2e9e94d;
   --nose: #000;
+  --nose-black: #00000061;
   --birch: #3d3929;
   --secluded-green: #706b5780;
   --smoke-tree: #ba5b38;
+  --barcelona-orange: #ff9700;
+  --green: green;
+  --red: red;
 }
 
 .dark {
@@ -26,7 +30,11 @@
   --body-secondary: #f1f1f163;
   --body-nose: #f2e9e94d;
   --nose: #000;
+  --nose-black: #00000061;
   --birch: #3d3929;
   --secluded-green: #706b5780;
   --smoke-tree: #ba5b38;
+  --barcelona-orange: #ff9700;
+  --green: green;
+  --red: red;
 }

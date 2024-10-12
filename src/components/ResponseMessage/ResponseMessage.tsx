@@ -8,5 +8,5 @@ interface ResponseMessageProps {
 export const ResponseMessage: React.FC<ResponseMessageProps> = ({
   userQuestion,
 }) => {
-  return <h5>{userQuestion}</h5>;
+  return <h5 className="break-words">{userQuestion}</h5>;
 };
