@@ -28,7 +28,7 @@ const Conversations = ({
   };
 
   return (
-    <div className="content-area overflow-y-auto">
+    <div className="content-area overflow-y-auto pr-1">
       {chatMessages.map((message, index) => {
         // User message
         if (message.sender === "user" && message.text) {

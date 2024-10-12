@@ -21,8 +21,11 @@ body {
   max-width: 12px;
 }
 main {
-  max-width: 720px;
+  max-width: var(--defaultBoxWidth);
 }
+/* .main-box-transform,.send-msg{
+  max-width: calc(var(--defaultBoxWidth) + 40px);
+} */
 .content-area {
   min-height: calc(100vh - var(--header-height) * 3);
   max-height: calc(100vh - var(--header-height) * 3);
@@ -76,14 +79,14 @@ main {
 }
 .main-box-transform {
   position: absolute;
-  left: 15px;
+  left: calc(100vw - 85%);
   width: 100%;
 }
 .show-box {
   top: var(--header-height);
-  max-width: 720px;
-  max-height: calc(100vh - var(--header-height));
-  min-height: calc(100vh - var(--header-height));
+  max-width: var(--defaultBoxWidth);
+  max-height: calc(100vh - var(--header-height) + -15px);
+  min-height: calc(100vh - var(--header-height) + -15px);
   transform: translateX(100%);
 }
 .show-box-transform {
@@ -142,4 +145,7 @@ main {
 }
 .graph-view-card{
   width: calc(100% - 80px);
+}
+.media-display-content-wrap{
+  height: calc(100vh - 117px);
 }

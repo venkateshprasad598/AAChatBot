@@ -42,7 +42,7 @@ export const MessageInputBox = ({ onSendMessage }) => {
         value={text}
         onChange={handleChange}
         onKeyDown={handleKeyPress}
-        className="mx-auto send-msg text-md font-medium resize-none bottom-0 w-full outline-none border fixed bottom-0 border-b-0 transition-all ease-out duration-150 pt-[15px] pl-[15px] pr-[50px]"
+        className="mx-auto send-msg text-md font-medium resize-none bottom-0 w-full outline-none border fixed border-b-0 transition-all ease-out duration-150 pt-[15px] pl-[15px] pr-[50px]"
         placeholder="Reply to ChatBot..."
       />
       <button

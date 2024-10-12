@@ -8,6 +8,7 @@
   --bg-300: 49 25.8% 87.8%;
   --bg-400: 46 28.3% 82%;
   --bg-500: 47 27% 71%;
+  --defaultBoxWidth: 720px;
   /* theme color */
   --white: #fff;
   --body: #f1f0e9;
