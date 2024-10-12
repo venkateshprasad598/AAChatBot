@@ -1,12 +1,13 @@
 export interface ChatMessage {
     sender: "user" | "bot";
-    text?: string;
+    markdown_text?: string;
     buttons?: {
         button1?: { label: string; payload: string };
         button2?: { label: string; payload: string };
     };
     knowledge_graph: any;
-    image: string
+    image: string;
+    question: string
 }
 
 interface GraphNode {
@@ -31,5 +32,5 @@ export type GraphResponse = GraphData;
 
 export interface Imedia {
     type: string | null,
-    data: GraphResponse
+    data: GraphData | string | null,
 } 

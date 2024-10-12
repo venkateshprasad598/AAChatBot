@@ -35,7 +35,7 @@ const MediaDisplay: React.FC<MediaDisplayProps> = ({
         {media?.type == "graph" ? (
           <GraphViewer graphData={media?.data} />
         ) : media?.type == "image" ? (
-          <ImageViewer imageSrc={""} />
+          <ImageViewer imageSrc={media?.data} />
         ) : (
           <h5 className="p-3 text-center">No data to display</h5>
         )}

@@ -5,18 +5,21 @@ import Conversations from "./Conversations";
 
 interface ConversationPanelProps {
   isToggle: boolean;
-  showBox: () => void;
   handleUserMessage: (msg: string) => void;
   chatMessages: ChatMessage[];
-  openMediaViewer: (metaData: { type: string; data: GraphResponse }) => void;
+  openMediaViewer: (metaData: {
+    type: string;
+    data: GraphResponse | string | null;
+  }) => void;
+  isProcessing: boolean;
 }
 
 const ConversationPanel: React.FC<ConversationPanelProps> = ({
   isToggle,
-  showBox,
   handleUserMessage,
   chatMessages,
   openMediaViewer,
+  isProcessing,
 }) => {
   return (
     <main
@@ -26,9 +29,10 @@ const ConversationPanel: React.FC<ConversationPanelProps> = ({
       )}
     >
       <Conversations
-        showBox={showBox}
         chatMessages={chatMessages}
         openMediaViewer={openMediaViewer}
+        handleUserMessage={handleUserMessage}
+        isProcessing={isProcessing}
       />
       <MessageInputBox onSendMessage={handleUserMessage} />
     </main>

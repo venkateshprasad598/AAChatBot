@@ -74,7 +74,7 @@ main {
 .bg-gradient-to-b {
   background-image: linear-gradient(to bottom, var(--tw-gradient-stops));
 }
-.bg-primary{
+.bg-primary {
   background-color: var(--body);
 }
 .main-box-transform {
@@ -104,7 +104,7 @@ main {
 .show-box-header {
   background-color: var(--white);
 }
-.prodile-content-calc-width{
+.prodile-content-calc-width {
   width: calc(100% - 30px);
 }
 /* button css */
@@ -117,11 +117,11 @@ main {
   overflow: hidden;
   z-index: 1;
 }
-.btn-green-border:hover{
-  border-color: var(--green);
+.btn-green-border:hover {
+  border-color: var(--body-nose);
 }
 .btn-green-border:after {
-  background: var(--green);
+  background: var(--body-nose);
   position: absolute;
   content: "";
   width: 100%;
@@ -137,15 +137,15 @@ main {
   bottom: 0;
   height: 100%;
 }
-.btn-red-border:after{
+.btn-red-border:after {
   background-color: var(--red);
 }
-.btn-red-border:hover{
+.btn-red-border:hover {
   border-color: var(--red);
 }
-.graph-view-card{
+.graph-view-card {
   width: calc(100% - 80px);
 }
-.media-display-content-wrap{
+.media-display-content-wrap {
   height: calc(100vh - 117px);
 }

@@ -43,10 +43,10 @@ export const MessageInputBox = ({ onSendMessage }) => {
         onChange={handleChange}
         onKeyDown={handleKeyPress}
         className="mx-auto send-msg text-md font-medium resize-none bottom-0 w-full outline-none border fixed border-b-0 transition-all ease-out duration-150 pt-[15px] pl-[15px] pr-[50px]"
-        placeholder="Reply to ChatBot..."
+        placeholder="Message Alfred Assistance"
       />
       <button
-        onClick={sendMessage} // Call sendMessage on button click
+        onClick={sendMessage} 
         className="w-[35px] h-[35px] flex-0-auto flex items-center justify-center absolute top-[15px] right-[15px] rounded-full transition-all ease-out duration-150 send-btn"
       >
         <ArrowUpOutlined style={{ color: "#FFFFFF" }} />

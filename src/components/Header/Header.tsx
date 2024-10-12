@@ -3,6 +3,7 @@ import profileOne from "./../../assets/images/avatar/profile-one.jpg";
 import { DownOutlined } from "@ant-design/icons";
 
 import "./Header.css";
+import { useSearchParams } from "react-router-dom";
 const items: MenuProps["items"] = [
   {
     key: "1",
@@ -14,15 +15,23 @@ const items: MenuProps["items"] = [
   },
 ];
 export const Header = () => {
+  const [searchParams] = useSearchParams();
+  const selectedState = searchParams?.get("selected-state");
+  const selectedStateLabel =
+    selectedState == "delhi"
+      ? "Delhi"
+      : selectedState == "tn"
+      ? "Tamil Nadu"
+      : null;
+
   return (
     <>
       <header className="header flex items-center justify-between">
         <div className="flex items-center gap-2">
           <h2 className="text-nose text-md font-medium mb-0">
-            Alfred Assistance
+            {selectedStateLabel} Alfred Assistance
           </h2>
-          <div className="flex items-center justify-center w-[30px] h-[30px] rounded-full overflow-hidden flex items-center justify-center profile-icon">
-            {/* <img src={profileOne} className="w-full h-full object-cover" /> */}
+          <div className="flex items-center justify-center w-[30px] h-[30px] rounded-full overflow-hidden flex items-center justify-center profile-icon hidden">
             <h5 className="text-nose font-bold text-xs mb-0 text-white">GM</h5>
           </div>
         </div>
@@ -36,7 +45,7 @@ export const Header = () => {
         </Dropdown> */}
         <div className="flex items-center justify-center w-[30px] h-[30px] rounded-full overflow-hidden flex items-center justify-center profile-icon">
           {/* <img src={profileOne} className="w-full h-full object-cover" /> */}
-          <h5 className="text-nose font-bold text-xs mb-0 text-white">TL</h5>
+          <h5 className="text-nose font-bold text-xs mb-0 text-white">U</h5>
         </div>
       </header>
     </>

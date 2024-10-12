@@ -969,7 +969,7 @@ export const apiResponse = {
     "response_id": "121dbd27-ed8a-449f-abb8-e21786b4837f",
     "response": [
         {
-            "markdown_text": "Hi, Excited to chat"
+            "markdown_text": "Hi, Excited to chat  Hi, Excited to chat Hi, Excited to chat Hi, Excited to chat Hi, Excited to chat Hi, Excited to chat Hi, Excited to chat Hi, Excited to chat Hi, Excited to chat Hi, Excited to chat Hi, Excited to chat Hi, Excited to chatHi, Excited to chat   Hi, Excited to chat Hi, Excited to chat"
         },
         {
             "buttons": {
@@ -980,6 +980,14 @@ export const apiResponse = {
                 "button2": {
                     "label": "No",
                     "payload": "No, I don't want this: 0.7491683557126406"
+                },
+                "button3": {
+                    "label": "No",
+                    "payload": "No, I don't want this: 0.7491683557126406"
+                },
+                "button4": {
+                    "label": "No",
+                    "payload": "No, I don't want this: 0.7491683557126406"
                 }
             }
         },
@@ -987,7 +995,7 @@ export const apiResponse = {
             "chart_html": "<div>Chart data: [0.9203473216509381, 0.6999509690156519, 0.5007740484339639, 0.6687968725668948, 0.083287129767731]</div>"
         },
         {
-            "image": "data:image/png;base64,37c8f1f87336a836c133c9e487559452e0af88923271893846fcbe63ece78d1d9ca1e777af4683d07718327ef1ca9abe78f1"
+            "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxUjuZXu2F86sca2cUjX-1LMcw9ABHh3f22g&s"
         },
         {
             "knowledge_graph": {

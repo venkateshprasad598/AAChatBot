@@ -1,22 +1,21 @@
 // hooks/useChat.ts
 import { useState } from "react";
-import { apiResponse } from "../constants/common.cont";
 import { ChatMessage } from "../types";
 import { useBotResponse } from "./useBotResponse";
 
 export const useChatDashboard = () => {
     const { loading, error, fetchBotResponse } = useBotResponse();
     const [chatMessages, setChatMessages] = useState<ChatMessage[]>([]);
+    const [isProcessing, setIsProcessing] = useState(false);
 
     const handleUserMessage = async (message: string) => {
         // Add user message to chat
-        setChatMessages((prev) => [...prev, { sender: "user", text: message }]);
+        setChatMessages((prev) => [...prev, { sender: "user", question: message }]);
+        setIsProcessing(true); // Show loader
 
-        // Fetch bot response
-        // const result = await fetchBotResponse(message);
-        const result = apiResponse.response;
-
-        if (result) {
+        try {
+            // Fetch bot response
+            const result = await fetchBotResponse(message);
             const botMessage = result.reduce(
                 (acc: any, res: any) => ({
                     ...acc,
@@ -27,6 +26,10 @@ export const useChatDashboard = () => {
             );
 
             setChatMessages((prev) => [...prev, botMessage]);
+        } catch (err) {
+            console.error("Error fetching bot response:", err);
+        } finally {
+            setIsProcessing(false);
         }
     };
 
@@ -40,5 +43,6 @@ export const useChatDashboard = () => {
         error,
         handleUserMessage,
         handleButtonClick,
+        isProcessing
     };
 };

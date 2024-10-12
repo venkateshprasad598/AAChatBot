@@ -1,47 +1,48 @@
-import { Button } from "antd";
+import { Button, Spin } from "antd";
 import { ChatMessage, GraphResponse } from "../../types";
 import { PromptMessage } from "../PromptMessage/PromptMessage";
 import { ResponseMessage } from "../ResponseMessage/ResponseMessage";
 import GraphViewer from "./GraphViewer";
+import { useEffect, useRef } from "react";
 
 interface ConversationProps {
-  showBox: () => void;
   chatMessages: ChatMessage[];
-  openMediaViewer: (metaData: { type: string; data: GraphResponse }) => void;
+  openMediaViewer: (metaData: {
+    type: string;
+    data: string | null | GraphResponse;
+    handleUserMessage: (msg: string) => void;
+  }) => void;
+  handleUserMessage: (msg: string) => void;
+  isProcessing: boolean;
 }
 
 const Conversations = ({
-  showBox,
   chatMessages,
   openMediaViewer,
+  handleUserMessage,
+  isProcessing,
 }: ConversationProps) => {
-  const handleMediaViewer = (type: string, message: ChatMessage) => {
-    openMediaViewer({
-      type: type,
-      data:
-        type == "graph"
-          ? message?.knowledge_graph
-          : type == "image"
-          ? message?.image
-          : null,
-    });
-  };
+  const bottomRef = useRef<HTMLDivElement | null>(null);
+
+  useEffect(() => {
+    if (bottomRef.current) {
+      bottomRef.current.scrollIntoView({ behavior: "smooth" });
+    }
+  }, [chatMessages]);
 
   return (
     <div className="content-area overflow-y-auto pr-1">
       {chatMessages.map((message, index) => {
-        // User message
-        if (message.sender === "user" && message.text) {
+        if (message.sender === "user" && message?.question) {
           return (
             <PromptMessage
               key={index}
-              userName="TL"
-              userQuestion={message.text}
+              userName="U"
+              userQuestion={message?.question}
             />
           );
         }
 
-        // Bot message
         if (message.sender === "bot") {
           return (
             <div className="w-full h-full mb-[15px]">
@@ -57,28 +58,38 @@ const Conversations = ({
                     />
                   )} */}
 
-                  {message.image && <GraphViewer showBox={showBox} codeViewIcon={false} />}
-
-                  <div onClick={() => handleMediaViewer("graph", message)}>
-                    Graph
-                  </div>
-                  <div onClick={() => handleMediaViewer("image", message)}>
-                    Image
-                  </div>
-                  <GraphViewer codeViewIcon={true} showBox={showBox} />
+                  {message.image && (
+                    <GraphViewer
+                      isGraphViewer={false}
+                      type="image"
+                      mediaData={message?.image}
+                      openMediaViewer={openMediaViewer}
+                    />
+                  )}
+                  {message.knowledge_graph && (
+                    <GraphViewer
+                      isGraphViewer={true}
+                      openMediaViewer={openMediaViewer}
+                      type="graph"
+                      mediaData={message?.knowledge_graph}
+                    />
+                  )}
 
                   {message.buttons && (
                     <div className="button-group flex gap-2 justify-end flex-wrap">
-                      {message.buttons.button1 && (
-                        <Button type="primary" className="btn btn-green-border">
-                          {message.buttons.button1.label}
-                        </Button>
-                      )}
-                      {message.buttons.button2 && (
-                        <Button type="primary" className="btn btn-green-border btn-red-border">
-                          {message.buttons.button2.label}
-                        </Button>
-                      )}
+                      {Object.entries(message.buttons).map(([key, button]) => {
+                        console.log({ key, button });
+                        return (
+                          <Button
+                            key={key}
+                            type="primary"
+                            className="btn btn-green-border"
+                            onClick={() => handleUserMessage(button.label)}
+                          >
+                            {button.label}
+                          </Button>
+                        );
+                      })}
                     </div>
                   )}
                 </div>
@@ -86,9 +97,15 @@ const Conversations = ({
             </div>
           );
         }
-        // Default return if no match
         return null;
       })}
+
+      {isProcessing && (
+        <div className="w-full flex justify-center items-center mt-4">
+          <Spin size="large" />
+        </div>
+      )}
+      <div ref={bottomRef} />
     </div>
   );
 };
