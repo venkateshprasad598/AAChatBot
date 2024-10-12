@@ -1,14 +1,20 @@
 import { CaretLeftFilled } from "@ant-design/icons";
 import clsx from "clsx";
 import React from "react";
-import { ShowChatMoreData } from "../ShowChatMoreData/ShowChatMoreData";
+import { Imedia } from "../../types";
+import { GraphViewer, ImageViewer } from "../media";
 
 interface MediaDisplayProps {
   isToggle: boolean;
   hideBox: () => void;
+  media: Imedia;
 }
 
-const MediaDisplay: React.FC<MediaDisplayProps> = ({ hideBox, isToggle }) => {
+const MediaDisplay: React.FC<MediaDisplayProps> = ({
+  hideBox,
+  isToggle,
+  media,
+}) => {
   return (
     <div
       className={clsx(
@@ -26,7 +32,13 @@ const MediaDisplay: React.FC<MediaDisplayProps> = ({ hideBox, isToggle }) => {
         <h4 className="mb-0 font-medium text-md">Open Graph</h4>
       </div>
       <div className="overflow-y-auto">
-        <ShowChatMoreData />
+        {media?.type == "graph" ? (
+          <GraphViewer graphData={media?.data} />
+        ) : media?.type == "image" ? (
+          <ImageViewer imageSrc={""} />
+        ) : (
+          "No data to display"
+        )}
       </div>
     </div>
   );

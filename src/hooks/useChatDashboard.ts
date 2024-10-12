@@ -1,21 +1,12 @@
 // hooks/useChat.ts
 import { useState } from "react";
+import { apiResponse } from "../constants/common.cont";
 import { ChatMessage } from "../types";
 import { useBotResponse } from "./useBotResponse";
-import { apiResponse } from "../constants/common.cont";
 
 export const useChatDashboard = () => {
     const { loading, error, fetchBotResponse } = useBotResponse();
     const [chatMessages, setChatMessages] = useState<ChatMessage[]>([]);
-    const [isToggle, setIsToggle] = useState(false);
-
-    const showBox = () => {
-        setIsToggle(true);
-    };
-
-    const hideBox = () => {
-        setIsToggle(false);
-    };
 
     const handleUserMessage = async (message: string) => {
         // Add user message to chat
@@ -49,8 +40,5 @@ export const useChatDashboard = () => {
         error,
         handleUserMessage,
         handleButtonClick,
-        showBox,
-        hideBox,
-        isToggle
     };
 };
