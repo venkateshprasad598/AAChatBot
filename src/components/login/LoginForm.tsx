@@ -13,41 +13,40 @@ export const LoginForm = () => {
   };
 
   return (
-    <div className="flex items-center justify-center h-screen bg-gray-100">
-      <Row justify="center" className="w-full">
-        <Col xs={22} sm={16} md={10} lg={8}>
-          <div className="bg-white p-10 shadow-lg rounded-lg">
-            <h1 className="text-center text-2xl font-bold mb-6">
-              Alfred Assistance
-            </h1>
-            <Form
-              name="loginForm"
-              layout="vertical"
-              onFinish={onFinish}
-              className="space-y-4"
+    <div className="flex items-center justify-center h-screen min-h-[550px] bg-[#080710] bg-[url('https://images.unsplash.com/photo-1477346611705-65d1883cee1e?dpr=0.800000011920929&auto=format&fit=crop&w=1199&h=800&q=80&cs=tinysrgb&crop=')] bg-cover bg-no-repeat bg-center auth-section overflow-y-auto">
+        <div className="relative auth-card md:max-w-[500px] w-full min-h-[300px] md:min-h-[400px] px-3 md:px-0">
+          <Form
+            name="loginForm"
+            layout="vertical"
+            onFinish={onFinish}
+            className="shadow-lg rounded-lg w-full h-full min-h-[inherit] bg-[#ffffff21] border border-x-2 border-y-2 border-[#ffffff1a] px-[15px] py-[15px] md:px-[50px] md:py-[50px] flex items-center flex-col justify-center"
+          >
+              <h1 className="text-center text-[18px] 2xl:text-[24px] font-bold text-white tracking-widest mb-6">
+                Alfred Assistance
+              </h1>
+            <Form.Item
+              name="assistance"
+              label="Select Assistance"
+              rules={[
+                { required: true, message: "Please select an option!" },
+              ]}
+              className="w-full"
             >
-              <Form.Item
-                name="assistance"
-                label="Select Assistance"
-                rules={[
-                  { required: true, message: "Please select an option!" },
-                ]}
-              >
-                <Select placeholder="Select an Assistance">
-                  <Option value="tn">Tamil Nadu Alfred Assistance</Option>
-                  <Option value="delhi">Delhi Alfred Assistance</Option>
-                </Select>
-              </Form.Item>
+              <Select placeholder="Select an Assistance">
+                <Option value="tn">Tamil Nadu Alfred Assistance</Option>
+                <Option value="delhi">Delhi Alfred Assistance</Option>
+              </Select>
+            </Form.Item>
 
-              <Form.Item>
-                <Button type="primary" htmlType="submit" className="w-full">
-                  Get Started
-                </Button>
-              </Form.Item>
-            </Form>
-          </div>
-        </Col>
-      </Row>
+            <Form.Item className="w-full">
+              <Button type="primary" htmlType="submit" className="w-full min-h-[45px] text-lg font-medium tracking-normal">
+                Get Started
+              </Button>
+            </Form.Item>
+          </Form>
+          <div className="md:w-[150px] md:h-[150px] absolute rounded-full -z-10 shape-one"></div>
+          <div className="md:w-[150px] md:h-[150px] absolute rounded-full -z-10 shape-two"></div>
+        </div>
     </div>
   );
 };
