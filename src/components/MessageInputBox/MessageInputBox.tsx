@@ -36,7 +36,7 @@ export const MessageInputBox = ({ onSendMessage }) => {
   };
 
   return (
-    <div className="relative">
+    <div className="relative send-msg-wrap">
       <textarea
         ref={textAreaRef}
         value={text}

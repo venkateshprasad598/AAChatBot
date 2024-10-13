@@ -34,7 +34,7 @@ const Conversations = ({
   if (chatMessages.length === 0) {
     return (
       <div className="flex items-center justify-center content-area">
-        <h1 className="text-4xl font-bold text-gray-700">
+        <h1 className="md:text-2xl xl:text-3xl 2xl:text-4xl font-bold text-gray-700">
           Hello, how can I help?
         </h1>
       </div>

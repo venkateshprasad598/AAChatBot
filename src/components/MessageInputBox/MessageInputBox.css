@@ -1,3 +1,7 @@
+.send-msg-wrap{
+  min-height: calc(var(--header-height) + 50px);
+  max-height: calc(100vh - var(--header-height) - 100px);
+}
 .send-msg {
   min-height: calc(var(--header-height) + 50px);
   max-height: calc(100vh - var(--header-height) - 100px);

@@ -21,10 +21,10 @@ export const Header = () => {
     <>
       <header className="header flex items-center justify-between">
         <div className="flex items-center gap-2">
-          <h2 className="text-nose text-md font-medium mb-0">
+          <h2 className="text-nose text-sm md:text-md font-medium mb-0">
             {selectedStateLabel} Alfred Assistance
           </h2>
-          <div className="flex items-center justify-center w-[30px] h-[30px] rounded-full overflow-hidden flex items-center justify-center profile-icon hidden">
+          <div className="w-[30px] h-[30px] rounded-full overflow-hidden flex items-center justify-center profile-icon hidden">
             <h5 className="text-nose font-bold text-xs mb-0 text-white">GM</h5>
           </div>
         </div>
@@ -36,8 +36,8 @@ export const Header = () => {
             </Space>
           </a>
         </Dropdown> */}
-        <div className="flex gap-4">
-          <div className="flex items-center justify-center w-[30px] h-[30px] rounded-full overflow-hidden flex items-center justify-center profile-icon">
+        <div className="flex gap-2 md:gap-4">
+          <div className="w-[30px] h-[30px] rounded-full overflow-hidden flex items-center justify-center profile-icon">
             {/* <img src={profileOne} className="w-full h-full object-cover" /> */}
             <h5 className="text-nose font-bold text-xs mb-0 text-white">U</h5>
           </div>

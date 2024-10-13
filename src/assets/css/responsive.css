@@ -42,3 +42,21 @@
     max-width: calc(50% - 20px);
   }
 }
+
+@media (max-width: 767px) {
+  .main-box-transform, .main-box .send-msg{
+    /* max-width: calc(100%);
+    left: 0; */
+  }
+  /* .main-box-transform{
+    max-width: 100%;
+  } */
+  .main-box-transform, .show-box-transform{
+    max-width: calc(100% - 30px);
+  }
+  .main-box .send-msg{
+    max-width: calc(100% - 30px);
+    margin: 0 auto;
+    left: 15px;
+  }
+}
