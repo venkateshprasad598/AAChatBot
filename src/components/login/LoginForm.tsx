@@ -8,7 +8,8 @@ export const LoginForm = () => {
 
   const onFinish = (values) => {
     console.log("Selected:", values);
-    navigate("/");
+    localStorage.setItem("_token", "frontendToken");
+    navigate(`/?selected-state=${values?.assistance}`);
   };
 
   return (
@@ -33,9 +34,7 @@ export const LoginForm = () => {
                 ]}
               >
                 <Select placeholder="Select an Assistance">
-                  <Option value="tamil-nadu">
-                    Tamil Nadu Alfred Assistance
-                  </Option>
+                  <Option value="tn">Tamil Nadu Alfred Assistance</Option>
                   <Option value="delhi">Delhi Alfred Assistance</Option>
                 </Select>
               </Form.Item>

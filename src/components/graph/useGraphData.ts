@@ -162,6 +162,7 @@ const useForceGraph = (nodesAndRelationships: any) => {
             setGraphData(restructuredRes);
             setIntGraphData(restructuredRes);
         }
+
     }, [nodesAndRelationships]);
 
     return {

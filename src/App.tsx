@@ -7,6 +7,7 @@ import { LoginForm } from "./components/login";
 import Layout from "./layout/Layout";
 import { routeList, routeListProps } from "./routes";
 import { configProvider, lightTheme } from "./utils";
+import { ProtectedRoute } from "./routes/ProtectedRoute";
 
 function App() {
   return (
@@ -17,7 +18,13 @@ function App() {
             <Router>
               <Routes>
                 <Route path="/login" element={<LoginForm />} />
-                <Route element={<Layout />}>
+                <Route
+                  element={
+                    <ProtectedRoute>
+                      <Layout />
+                    </ProtectedRoute>
+                  }
+                >
                   {routeList.map((route: routeListProps) => (
                     <Route
                       key={route.id}

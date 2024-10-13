@@ -1,20 +1,9 @@
-import { Dropdown, MenuProps, Space } from "antd";
-import profileOne from "./../../assets/images/avatar/profile-one.jpg";
-import { DownOutlined } from "@ant-design/icons";
-
+import { Button } from "antd";
+import { useNavigate, useSearchParams } from "react-router-dom";
 import "./Header.css";
-import { useSearchParams } from "react-router-dom";
-const items: MenuProps["items"] = [
-  {
-    key: "1",
-    label: "Rename",
-  },
-  {
-    key: "2",
-    label: "Delete",
-  },
-];
+
 export const Header = () => {
+  const navigate = useNavigate();
   const [searchParams] = useSearchParams();
   const selectedState = searchParams?.get("selected-state");
   const selectedStateLabel =
@@ -24,6 +13,10 @@ export const Header = () => {
       ? "Tamil Nadu"
       : null;
 
+  const handleLogout = () => {
+    localStorage.removeItem("_token");
+    navigate("/login");
+  };
   return (
     <>
       <header className="header flex items-center justify-between">
@@ -43,9 +36,19 @@ export const Header = () => {
             </Space>
           </a>
         </Dropdown> */}
-        <div className="flex items-center justify-center w-[30px] h-[30px] rounded-full overflow-hidden flex items-center justify-center profile-icon">
-          {/* <img src={profileOne} className="w-full h-full object-cover" /> */}
-          <h5 className="text-nose font-bold text-xs mb-0 text-white">U</h5>
+        <div className="flex gap-4">
+          <div className="flex items-center justify-center w-[30px] h-[30px] rounded-full overflow-hidden flex items-center justify-center profile-icon">
+            {/* <img src={profileOne} className="w-full h-full object-cover" /> */}
+            <h5 className="text-nose font-bold text-xs mb-0 text-white">U</h5>
+          </div>
+
+          <Button
+            type="primary"
+            className="btn btn-green-border"
+            onClick={handleLogout}
+          >
+            Logout
+          </Button>
         </div>
       </header>
     </>

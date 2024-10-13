@@ -115,7 +115,7 @@ main {
   color: var(--nose);
   border: 1px solid var(--nose-black);
   overflow: hidden;
-  z-index: 1;
+  /* z-index: 1; */
 }
 .btn-green-border:hover {
   border-color: var(--body-nose);

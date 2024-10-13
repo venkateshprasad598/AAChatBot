@@ -46,7 +46,7 @@ const GraphViewer = ({
           {isGraphViewer ? "Graph" : "Image"}
         </h5>
         <p className="text-xs">
-          {isGraphViewer ? "Click to open chart" : "Click to open Image"}
+          {isGraphViewer ? "Click to open graph" : "Click to open Image"}
         </p>
       </div>
     </div>

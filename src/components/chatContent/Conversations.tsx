@@ -30,6 +30,17 @@ const Conversations = ({
     }
   }, [chatMessages]);
 
+  // Display greeting message when chatMessages is empty
+  if (chatMessages.length === 0) {
+    return (
+      <div className="flex items-center justify-center content-area">
+        <h1 className="text-4xl font-bold text-gray-700">
+          Hello, how can I help?
+        </h1>
+      </div>
+    );
+  }
+
   return (
     <div className="content-area overflow-y-auto pr-1">
       {chatMessages.map((message, index) => {
