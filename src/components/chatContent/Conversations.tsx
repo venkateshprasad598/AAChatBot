@@ -4,6 +4,7 @@ import { PromptMessage } from "../PromptMessage/PromptMessage";
 import { ResponseMessage } from "../ResponseMessage/ResponseMessage";
 import GraphViewer from "./GraphViewer";
 import { useEffect, useRef } from "react";
+import { getFirstAlphabetOfUsername } from "../../utils";
 
 interface ConversationProps {
   chatMessages: ChatMessage[];
@@ -23,7 +24,7 @@ const Conversations = ({
   isProcessing,
 }: ConversationProps) => {
   const bottomRef = useRef<HTMLDivElement | null>(null);
-
+  const username = getFirstAlphabetOfUsername();
   useEffect(() => {
     if (bottomRef.current) {
       bottomRef.current.scrollIntoView({ behavior: "smooth" });
@@ -48,7 +49,7 @@ const Conversations = ({
           return (
             <PromptMessage
               key={index}
-              userName="U"
+              userName={username}
               userQuestion={message?.question}
             />
           );

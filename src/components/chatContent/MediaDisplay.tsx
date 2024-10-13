@@ -33,7 +33,7 @@ const MediaDisplay: React.FC<MediaDisplayProps> = ({
       </div>
       <div className="overflow-y-auto media-display-content-wrap">
         {media?.type == "graph" ? (
-          <GraphViewer graphData={media?.data} />
+            <GraphViewer graphData={media?.data} />
         ) : media?.type == "image" ? (
           <ImageViewer imageSrc={media?.data} />
         ) : (

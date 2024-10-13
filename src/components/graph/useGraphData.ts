@@ -1,9 +1,8 @@
-import axios from "axios";
 import { useEffect, useRef, useState } from "react";
 import { getMoreNodes } from "../../api";
 
 const useForceGraph = (nodesAndRelationships: any) => {
-    const fgRef = useRef<any>();
+    const fgRef = useRef<any>(null);
     const [graphData, setGraphData] = useState({ nodes: [], links: [] });
     const [intGraphData, setIntGraphData] = useState({ nodes: [], links: [] });
     const [selectedNode, setSelectedNode] = useState(null);
@@ -157,6 +156,8 @@ const useForceGraph = (nodesAndRelationships: any) => {
     };
 
     const handleHoveredNode = (e) => setHoveredNode(e);
+
+    console.log({ nodesAndRelationships });
 
     useEffect(() => {
         const initialGraphData = { ...nodesAndRelationships }

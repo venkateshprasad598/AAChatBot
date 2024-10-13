@@ -1,4 +1,4 @@
-import { Button, Form, Select } from "antd";
+import { Button, Form, Input, Select } from "antd";
 import { useNavigate } from "react-router-dom";
 
 const { Option } = Select;
@@ -9,6 +9,7 @@ export const LoginForm = () => {
   const onFinish = (values) => {
     console.log("Selected:", values);
     localStorage.setItem("_token", "frontendToken");
+    localStorage.setItem("username", values?.username);
     navigate(`/?selected-state=${values?.assistance}`);
   };
 
@@ -25,9 +26,18 @@ export const LoginForm = () => {
             Alfred Assistance
           </h1>
           <Form.Item
+            name="username"
+            label="Username"
+            rules={[{ required: true, message: "Enter username" }]}
+            className="w-full"
+          >
+            <Input />
+          </Form.Item>
+
+          <Form.Item
             name="assistance"
             label="Select Assistance"
-            rules={[{ required: true, message: "Please select an option!" }]}
+            rules={[{ required: true, message: "Select an option" }]}
             className="w-full"
           >
             <Select placeholder="Select an Assistance">

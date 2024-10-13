@@ -1,6 +1,7 @@
 import { Button } from "antd";
 import { useNavigate, useSearchParams } from "react-router-dom";
 import "./Header.css";
+import { getFirstAlphabetOfUsername } from "../../utils";
 
 export const Header = () => {
   const navigate = useNavigate();
@@ -17,6 +18,7 @@ export const Header = () => {
     localStorage.removeItem("_token");
     navigate("/login");
   };
+
   return (
     <>
       <header className="header flex items-center justify-between">
@@ -39,7 +41,9 @@ export const Header = () => {
         <div className="flex gap-2 md:gap-4">
           <div className="w-[30px] h-[30px] rounded-full overflow-hidden flex items-center justify-center profile-icon">
             {/* <img src={profileOne} className="w-full h-full object-cover" /> */}
-            <h5 className="text-nose font-bold text-xs mb-0 text-white">U</h5>
+            <h5 className="text-nose font-bold text-xs mb-0 text-white">
+              {getFirstAlphabetOfUsername()}
+            </h5>
           </div>
 
           <Button
