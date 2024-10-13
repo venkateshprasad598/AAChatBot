@@ -1,5 +1,6 @@
 import axios from "axios";
 import { useEffect, useRef, useState } from "react";
+import { getMoreNodes } from "../../api";
 
 const useForceGraph = (nodesAndRelationships: any) => {
     const fgRef = useRef<any>();
@@ -95,10 +96,11 @@ const useForceGraph = (nodesAndRelationships: any) => {
         const id = node?.id || "";
 
         if (!label || !id) return;
+        const params = {
+            id: id, label: label
+        }
         try {
-            const response = await axios.get(
-                `https://www.tejailabs.in:8506/get-on-click?id=${id}&label=${label}`
-            );
+            const response = await getMoreNodes(params)
 
             if (response?.status === 200) {
                 const responseArr = response?.data;
