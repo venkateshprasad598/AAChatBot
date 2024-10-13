@@ -157,13 +157,19 @@ const useForceGraph = (nodesAndRelationships: any) => {
     const handleHoveredNode = (e) => setHoveredNode(e);
 
     useEffect(() => {
-        if (nodesAndRelationships?.nodes && nodesAndRelationships?.relationships) {
-            const restructuredRes = transformData(nodesAndRelationships);
+        const initialGraphData = { ...nodesAndRelationships }
+        if (initialGraphData?.nodes && initialGraphData?.relationships) {
+            const restructuredRes = transformData(initialGraphData);
             setGraphData(restructuredRes);
             setIntGraphData(restructuredRes);
         }
-
     }, [nodesAndRelationships]);
+
+    useEffect(() => {
+        if (fgRef?.current) {
+            fgRef?.current?.d3Force("link").distance(120);
+        }
+    }, [graphData])
 
     return {
         fgRef,
