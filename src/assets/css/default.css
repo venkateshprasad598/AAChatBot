@@ -60,6 +60,33 @@ main {
 .text-nose {
   color: var(--nose);
 }
+.dark .msg-card .text-nose,
+.dark .msg-card .btn-green-border,
+.dark .anticon,
+.dark .show-box .text-nose{
+  color: var(--body);
+}
+.dark .msg-card .show-detail-head:hover,
+.dark .show-box,
+.dark .msg-card .profile-icon h5,
+.dark .auth-card .ant-col label,
+.dark .auth-section .auth-card .ant-select .ant-select-selector, 
+.dark .auth-section .auth-card .ant-input,
+.dark .auth-section .auth-card .ant-select .ant-select-selector .ant-select-selection-placeholder,
+.dark .auth-section .auth-card .ant-select .ant-select-selection-item, .auth-section .auth-card .ant-input,
+.dark .auth-section .auth-card .ant-select-arrow,
+.dark .auth-section .auth-card .anticon{
+  color: var(--nose);
+}
+.dark .send-btn{
+  background-color: var(--body);
+}
+.dark .close-icon:hover {
+  background-color: var(--nose);
+}
+.dark .auth-card{
+  background-color: transparent;
+}
 /* bg gradiant */
 .to-bg-400 {
   --tw-gradient-to: hsl(var(--bg-400) / 1) var(--tw-gradient-to-position);
@@ -99,7 +126,7 @@ main {
 .show-detail-head:hover {
   background-color: var(--body-nose);
 }
-.hover-bg:hover {
+.close-icon:hover {
   background-color: var(--body);
 }
 .show-box-header {
@@ -116,6 +143,7 @@ main {
   color: var(--nose);
   border: 1px solid var(--nose-black);
   overflow: hidden;
+  box-shadow: none;
   /* z-index: 1; */
 }
 .btn-green-border:hover {
@@ -176,30 +204,39 @@ main {
   bottom: -60px;
 }
 /* select style css start */
-.auth-section .auth-card .ant-select,
-.auth-section .auth-card .ant-select-selector .ant-select-selection-search-input{
-  height: 45px;
-}
-.auth-section .auth-card .ant-select .ant-select-selector {
+
+.auth-section .auth-card .ant-select .ant-select-selector,
+.auth-section .auth-card .ant-input {
   border: 1px solid #ffffff1a;
   background: rgba(255, 255, 255, 0.07);
   height: inherit;
   color: var(--white);
 }
 .auth-section .auth-card .ant-select .ant-select-selector .ant-select-selection-placeholder,
-.auth-section .auth-card .ant-select .ant-select-selection-item{
+.auth-section .auth-card .ant-select .ant-select-selection-item,
+.auth-section .auth-card .ant-input{
   color: var(--white);
   font-size: 16px;
   letter-spacing: 0.5px;
 }
-.auth-section .auth-card .ant-select-single.ant-select-focused.ant-select-outlined:not(.ant-select-disabled):not(.ant-select-customize-input):not(.ant-pagination-size-changer) .ant-select-selector{
+.auth-section .auth-card .ant-select,
+.auth-section .auth-card .ant-select-selector .ant-select-selection-search-input,
+.auth-section .auth-card .ant-input{
+  height: 45px;
+}
+.auth-section .auth-card .ant-select-single.ant-select-focused.ant-select-outlined:not(.ant-select-disabled):not(.ant-select-customize-input):not(.ant-pagination-size-changer) .ant-select-selector,
+.auth-section .auth-card .ant-input{
   /* background-color: transparent; */
   box-shadow: unset;
   border: 1px solid #ffffff1a;
   outline: 0;
 }
-.auth-section .auth-card :where(.css-dev-only-do-not-override-ojluqj).ant-select-outlined:not(.ant-select-disabled):not(.ant-select-customize-input):not(.ant-pagination-size-changer):hover .ant-select-selector{
+.auth-section .auth-card :where(.css-dev-only-do-not-override-ojluqj).ant-select-outlined:not(.ant-select-disabled):not(.ant-select-customize-input):not(.ant-pagination-size-changer):hover .ant-select-selector,
+.auth-section .auth-card .ant-input:hover{
   border: 1px solid #ffffff1a;
+  background-color: transparent;
+  box-shadow: none;
+  outline: none;
 }
 .auth-section .auth-card .ant-select-arrow{
   color:var(--white);
