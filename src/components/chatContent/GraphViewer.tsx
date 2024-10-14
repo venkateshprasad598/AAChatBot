@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { svgData } from "../../constants/svgData";
 import { GraphData } from "../../types";
 
@@ -9,6 +10,7 @@ interface GraphViewerProps {
   type: string;
   mediaData: string | GraphData;
   isGraphViewer: boolean;
+  isLastElement: boolean;
 }
 
 const GraphViewer = ({
@@ -16,6 +18,7 @@ const GraphViewer = ({
   type,
   mediaData,
   isGraphViewer,
+  isLastElement,
 }: GraphViewerProps) => {
   const handleMediaViewer = () => {
     openMediaViewer({
@@ -23,6 +26,12 @@ const GraphViewer = ({
       data: mediaData,
     });
   };
+
+  useEffect(() => {
+    if (isLastElement && type == "graph") {
+      handleMediaViewer();
+    }
+  }, []);
 
   return (
     <div

@@ -1,6 +1,6 @@
+import React from "react";
 import { CloseOutlined } from "@ant-design/icons";
 import clsx from "clsx";
-import React from "react";
 import { Imedia } from "../../types";
 import { GraphViewer, ImageViewer } from "../media";
 
@@ -15,6 +15,7 @@ const MediaDisplay: React.FC<MediaDisplayProps> = ({
   isToggle,
   media,
 }) => {
+
   return (
     <div
       className={clsx(
@@ -32,9 +33,9 @@ const MediaDisplay: React.FC<MediaDisplayProps> = ({
         </button>
       </div>
       <div className="overflow-y-auto media-display-content-wrap">
-        {media?.type == "graph" ? (
-            <GraphViewer graphData={media?.data} />
-        ) : media?.type == "image" ? (
+        {media?.type === "graph" ? (
+          <GraphViewer graphData={media?.data} />
+        ) : media?.type === "image" ? (
           <ImageViewer imageSrc={media?.data} />
         ) : (
           <h5 className="p-3 text-center">No data to display</h5>

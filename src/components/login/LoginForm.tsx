@@ -7,7 +7,6 @@ export const LoginForm = () => {
   const navigate = useNavigate();
 
   const onFinish = (values) => {
-    console.log("Selected:", values);
     localStorage.setItem("_token", "frontendToken");
     localStorage.setItem("username", values?.username);
     navigate(`/?selected-state=${values?.assistance}`);

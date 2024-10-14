@@ -35,10 +35,11 @@ const useForceGraph = (nodesAndRelationships: any) => {
 
         let colorIndex = colorCount;
         const uniqueLabels = [];
-        const objType = {};
+        const objType = {}
 
         const nodes = apiResponse.nodes.map((nodeData) => {
-            const { id, label, properties } = nodeData;
+            const obj = nodeData
+            const { label, properties } = nodeData;
             if (colorIndex === colors.length) colorIndex = 0;
 
             if (
@@ -50,17 +51,14 @@ const useForceGraph = (nodesAndRelationships: any) => {
                 colorIndex++;
                 uniqueLabels.push(label[0]);
             }
-
             setColorCount(colorIndex);
-            return {
-                id,
-                name: properties?.id || "",
-                properties: properties,
-                parentColor: objType[label?.[0]] || "black",
-                childColor: "",
-                collapsed: false,
-                label: label?.[0] || "",
-            };
+            obj["name"] = properties?.name || ""
+            obj["properties"] = properties
+            obj["parentColor"] = objType[label?.[0]] || "black",
+                obj["childColor"] = ""
+            obj["collapsed"] = false
+            obj["label"] = label?.[0] || ""
+            return obj
         });
 
         const links = apiResponse.relationships;
@@ -157,13 +155,11 @@ const useForceGraph = (nodesAndRelationships: any) => {
 
     const handleHoveredNode = (e) => setHoveredNode(e);
 
-    console.log({ nodesAndRelationships });
-
     useEffect(() => {
         const initialGraphData = { ...nodesAndRelationships }
         if (initialGraphData?.nodes && initialGraphData?.relationships) {
             const restructuredRes = transformData(initialGraphData);
-            setGraphData(restructuredRes);
+            setGraphData(restructuredRes)
             setIntGraphData(restructuredRes);
         }
     }, [nodesAndRelationships]);

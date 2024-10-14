@@ -9,12 +9,10 @@ export const useChatDashboard = () => {
     const [isProcessing, setIsProcessing] = useState(false);
 
     const handleUserMessage = async (message: string) => {
-        // Add user message to chat
-        setChatMessages((prev) => [...prev, { sender: "user", question: message }]);
-        setIsProcessing(true); // Show loader
+        setChatMessages((prev: any) => [...prev, { sender: "user", question: message }]);
+        setIsProcessing(true);
 
         try {
-            // Fetch bot response
             const result = await fetchBotResponse(message);
             const botMessage = result.reduce(
                 (acc: any, res: any) => ({

@@ -14,6 +14,7 @@ export const useChatMediaViewer = () => {
         setMedia({
             type: null, data: null
         })
+        return null
     };
 
     const openMediaViewer = (mediaData: any) => {

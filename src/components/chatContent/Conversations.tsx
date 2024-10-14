@@ -25,6 +25,7 @@ const Conversations = ({
 }: ConversationProps) => {
   const bottomRef = useRef<HTMLDivElement | null>(null);
   const username = getFirstAlphabetOfUsername();
+  const chatMessagesLength = chatMessages?.length - 1;
   useEffect(() => {
     if (bottomRef.current) {
       bottomRef.current.scrollIntoView({ behavior: "smooth" });
@@ -76,21 +77,23 @@ const Conversations = ({
                       type="image"
                       mediaData={message?.image}
                       openMediaViewer={openMediaViewer}
+                      isLastElement={false}
                     />
                   )}
+
                   {message.knowledge_graph && (
                     <GraphViewer
                       isGraphViewer={true}
                       openMediaViewer={openMediaViewer}
                       type="graph"
                       mediaData={message?.knowledge_graph}
+                      isLastElement={index === chatMessagesLength}
                     />
                   )}
 
                   {message.buttons && (
                     <div className="button-group flex gap-2 justify-end flex-wrap">
                       {Object.entries(message.buttons).map(([key, button]) => {
-                        console.log({ key, button });
                         return (
                           <Button
                             key={key}
