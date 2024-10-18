@@ -11,8 +11,8 @@ export const useBotResponse = () => {
         setLoading(true);
         setError(null);
         try {
-            const params = { user_message: userMessage, user_id: "1", auth_token: "jwt" };
-            const result = await getBotResponse(params);
+            const payload = { user_message: userMessage, user_id: "1", auth_token: "jwt" };
+            const result = await getBotResponse(payload);
             return result?.data?.response || [];
         } catch (err) {
             setError("Failed to fetch bot response.");
