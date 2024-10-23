@@ -15,11 +15,10 @@ const MediaDisplay: React.FC<MediaDisplayProps> = ({
   isToggle,
   media,
 }) => {
-
   return (
     <div
       className={clsx(
-        isToggle ? "show-box-transform right-[15px]" : "",
+        true ? "show-box-transform right-[15px]" : "",
         "show-box fixed right-0 bg-bg-100 border-0.5 border-border-300 flex-1 overflow-y-auto bg-white border rounded-xl 2xl:shadow-lg w-full transition-all ease-out duration-150"
       )}
     >
@@ -33,13 +32,13 @@ const MediaDisplay: React.FC<MediaDisplayProps> = ({
         </button>
       </div>
       <div className="overflow-y-auto media-display-content-wrap">
-        {media?.type === "graph" ? (
-          <GraphViewer graphData={media?.data} />
-        ) : media?.type === "image" ? (
-          <ImageViewer imageSrc={media?.data} />
-        ) : (
-          <h5 className="p-3 text-center">No data to display</h5>
-        )}
+        {/* {media?.type === "graph" ? ( */}
+        <GraphViewer graphData={media?.data} />
+        {/* ) : media?.type === "image" ? ( */}
+        {/* <ImageViewer imageSrc={media?.data} /> */}
+        {/* ) : ( */}
+        {/* <h5 className="p-3 text-center">No data to display</h5> */}
+        {/* )} */}
       </div>
     </div>
   );

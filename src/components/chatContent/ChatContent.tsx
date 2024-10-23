@@ -15,9 +15,9 @@ export const ChatContent = () => {
         openMediaViewer={openMediaViewer}
         isProcessing={isProcessing}
       />
-      {media?.data && (
+      {/* {media?.data && ( */}
         <MediaDisplay isToggle={isToggle} hideBox={hideBox} media={media} />
-      )}
+      {/* )} */}
     </>
   );
 };
