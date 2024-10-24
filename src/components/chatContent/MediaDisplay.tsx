@@ -23,7 +23,7 @@ const MediaDisplay: React.FC<MediaDisplayProps> = ({
       )}
     >
        <button
-            className="border p-2 rounded hover-bg transition-all ease-out duration-150 ml-auto flex items-center justify-center mt-3 mr-3 mb-3 bg-white"
+            className="border p-2 rounded hover-bg transition-all ease-out duration-150 ml-auto flex items-center justify-center mt-3 mr-3 mb-3 bg-white sticky top-[7px] z-10"
             onClick={hideBox}
           >
             <CloseOutlined />
@@ -32,7 +32,7 @@ const MediaDisplay: React.FC<MediaDisplayProps> = ({
         <div className="mb-2 xl:mb-4 grid grid-cols-1 lg:grid-cols-2	gap-2 xl:gap-4">
             <div className="bg-white min-h-[250px] 1xl:shadow-lg">
                <div className="px-4 py-1 border bottom-1 border-t-0 border-l-0 border-r-0 flex items-center gap-3 sticky top-0 show-box-header h-[50px]">
-                <h4 className="mb-0 font-medium text-md text-gray-700">Open Graph</h4>
+                <h4 className="mb-0 font-medium text-md text-nose">Open Graph</h4>
               </div>
               <div className="p-3">
                 <p className="text-sm leading-6">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Itaque enim officia dolores beatae tenetur dolor quisquam eum quasi mollitia, similique ab quos voluptatibus id dolorem explicabo, voluptatum voluptate autem. Blanditiis?</p>
@@ -40,7 +40,7 @@ const MediaDisplay: React.FC<MediaDisplayProps> = ({
             </div>
             <div className="bg-white min-h-[250px] 1xl:shadow-lg">
                <div className="px-4 py-1 border bottom-1 border-t-0 border-l-0 border-r-0 flex items-center gap-3 sticky top-0 show-box-header h-[50px]">
-                <h4 className="mb-0 font-medium text-md text-gray-700">Open Graph</h4>
+                <h4 className="mb-0 font-medium text-md text-nose">Open Graph</h4>
               </div>
               <div className="p-3">
                 <p className="text-sm leading-6">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Itaque enim officia dolores beatae tenetur dolor quisquam eum quasi mollitia, similique ab quos voluptatibus id dolorem explicabo, voluptatum voluptate autem. Blanditiis?</p>
@@ -49,7 +49,7 @@ const MediaDisplay: React.FC<MediaDisplayProps> = ({
         </div>
         <div className="w-100 bg-white 1xl:shadow-lg">
           <div className="px-4 py-1 border bottom-1 border-t-0 border-l-0 border-r-0 flex items-center gap-3 sticky top-0 show-box-header h-[50px]">
-            <h4 className="mb-0 font-medium text-md">Open Graph</h4>
+            <h4 className="mb-0 font-medium text-md text-nose">Open Graph</h4>
           </div>
           <div className="overflow-y-auto">
             {/* {media?.type === "graph" ? ( */}
