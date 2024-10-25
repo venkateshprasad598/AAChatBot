@@ -24,14 +24,14 @@
 
 .dark {
   /* theme color */
-  --white: #000;
-  --body: #f1f0e9;
-  --body-secondary: #f1f1f163;
-  --body-nose: #f2e9e94d;
-  --nose: #000;
-  --nose-black: #00000061;
-  --birch: #3d3929;
-  --secluded-green: #706b5780;
-  --smoke-tree: #ba5b38;
-  --barcelona-orange: #ff9700;
+  --white: #1e1e1e; /* Darker gray for background */
+  --body: #2b2b2b;  /* Deep charcoal for the main body */
+  --body-secondary: #404040; /* Dark gray for secondary body elements */
+  --body-nose: #303030; /* Slightly lighter for small elements like borders */
+  --nose: #f5f5f5; /* Light gray for text and icons */
+  --nose-black: #e0e0e0; /* Subtle off-white */
+  --birch: #504945; /* Dark brown for accent elements */
+  --secluded-green: #5a6d56; /* Muted green, still distinct */
+  --smoke-tree: #8c4d3a; /* Deep reddish-brown */
+  --barcelona-orange: #ff6a00; /* Bright orange for a striking contrast */
 }

@@ -71,17 +71,27 @@ const Conversations = ({
                     />
                   )} */}
 
-                  {message.image && (
+                  {message?.chart_html && (
+                    <GraphViewer
+                      isGraphViewer={false}
+                      type="chart"
+                      mediaData={message?.chart_html}
+                      openMediaViewer={openMediaViewer}
+                      isLastElement={index === chatMessagesLength}
+                    />
+                  )}
+
+                  {message?.image && (
                     <GraphViewer
                       isGraphViewer={false}
                       type="image"
                       mediaData={message?.image}
                       openMediaViewer={openMediaViewer}
-                      isLastElement={false}
+                      isLastElement={index === chatMessagesLength}
                     />
                   )}
 
-                  {message.knowledge_graph && (
+                  {message?.knowledge_graph && (
                     <GraphViewer
                       isGraphViewer={true}
                       openMediaViewer={openMediaViewer}

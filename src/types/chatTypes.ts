@@ -7,7 +7,8 @@ export interface ChatMessage {
     };
     knowledge_graph: any;
     image: string;
-    question: string
+    question: string;
+    chart_html: any
 }
 
 interface GraphNode {
@@ -32,5 +33,5 @@ export type GraphResponse = GraphData;
 
 export interface Imedia {
     type: string | null,
-    data: GraphData | string | null,
+    data: any,
 } 

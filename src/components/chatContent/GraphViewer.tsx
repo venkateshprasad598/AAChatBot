@@ -28,7 +28,7 @@ const GraphViewer = ({
   };
 
   useEffect(() => {
-    if (isLastElement && type == "graph") {
+    if (isLastElement && type && mediaData) {
       handleMediaViewer();
     }
   }, []);
@@ -52,10 +52,14 @@ const GraphViewer = ({
       </div>
       <div className="graph-view-card px-3 h-full">
         <h5 className="font-semibold break-words mb-1 capitalize">
-          {isGraphViewer ? "Graph" : "Image"}
+          {type == "chart" ? "Chart" : isGraphViewer ? "Graph" : "Image"}
         </h5>
         <p className="text-xs">
-          {isGraphViewer ? "Click to open graph" : "Click to open Image"}
+          {type == "chart"
+            ? "Click to open chart"
+            : isGraphViewer
+            ? "Click to open graph"
+            : "Click to open Image"}
         </p>
       </div>
     </div>
