@@ -14,6 +14,7 @@ const useForceGraph = (nodesAndRelationships: any) => {
     const [colorObjs, setColorObjs] = useState({});
     const [colorCount, setColorCount] = useState(0);
 
+    
     const handleModalClose = () => {
         setModalOpen(false);
     };
@@ -66,6 +67,7 @@ const useForceGraph = (nodesAndRelationships: any) => {
     };
 
     const handleNodeClick = (node) => {
+        console.log({ node });
         if (fgRef?.current && !isRefGiven) {
             fgRef?.current?.d3Force("link").distance(120); // Increase the link distance
             setRefGiven(true);

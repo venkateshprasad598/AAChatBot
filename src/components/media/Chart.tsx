@@ -1,15 +1,17 @@
-import React, { useEffect, useRef } from "react";
+import { useLayoutEffect, useRef } from "react";
 
 const Chart = ({ data }: any) => {
-  const containerRef = useRef(null);
+  const containerRef = useRef<HTMLDivElement | null>();
 
-  useEffect(() => {
-    const range = document.createRange();
-    const fragment = range.createContextualFragment(data);
-    if (containerRef.current) {
-      containerRef.current.appendChild(fragment);
+  useLayoutEffect(() => {
+    console.log({ containerRef: containerRef?.current });
+    if (data && containerRef?.current) {
+      const range = document.createRange();
+      const fragment = range.createContextualFragment(data);
+      // containerRef.current.innerHTML = ""; // Clear old content
+      containerRef.current?.appendChild(fragment);
     }
-  }, [data]);
+  }, [data, containerRef]);
 
   return (
     <div
@@ -19,10 +21,10 @@ const Chart = ({ data }: any) => {
         justifyContent: "center",
         width: "100%",
         height: "100%",
-        objectFit : "contain"
+        objectFit: "contain",
       }}
     >
-      <div ref={containerRef} />;
+      <div ref={containerRef} />
     </div>
   );
 };

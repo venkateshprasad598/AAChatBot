@@ -48,6 +48,8 @@ const GraphPropertiesModal: React.FC<GraphPropertiesModalProps> = ({
 }) => {
   let isAvailable = false;
 
+  console.log({ selectedNode: selectedNode });
+
   return (
     <Modal
       title={
@@ -71,7 +73,7 @@ const GraphPropertiesModal: React.FC<GraphPropertiesModalProps> = ({
         <div className="flex flex-col gap-2 mt-1">
           {selectedNode?.properties &&
           Object.keys(selectedNode?.properties).length
-            ? orderedKeys.map((key) => {
+            ? Object.keys(selectedNode?.properties).map((key) => {
                 if (key in selectedNode.properties) {
                   isAvailable = true;
                   return (

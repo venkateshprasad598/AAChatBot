@@ -102,14 +102,14 @@ table tbody tr:hover {
   cursor: pointer;
 }
 
-ol {
+ol, ul {
   list-style-type: decimal; /* Or 'circle', 'lower-alpha', etc. */
   margin-left: 20px;
   padding-left: 10px;
   font-size: 14px;
 }
 
-ol li {
+ol li, ul li {
   font-weight: 600;
   margin-bottom: 8px;
 }

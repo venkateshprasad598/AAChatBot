@@ -1,6 +1,6 @@
 import { CloseOutlined } from "@ant-design/icons";
 import clsx from "clsx";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Imedia } from "../../types";
 import { GraphViewer, ImageViewer } from "../media";
 import Chart from "../media/Chart";
