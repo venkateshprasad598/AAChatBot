@@ -1,11 +1,7 @@
-import { useEffect, useLayoutEffect, useRef, useState } from "react";
+import { useEffect, useRef } from "react";
 
 const Chart = ({ data }: any) => {
-  console.log({ data });
-
   const containerRef = useRef<HTMLDivElement | null>();
-  const [count, setcount] = useState(0);
-
   useEffect(() => {
     if (data && containerRef?.current) {
       const range = document.createRange();

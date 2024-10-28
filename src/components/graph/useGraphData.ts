@@ -14,7 +14,7 @@ const useForceGraph = (nodesAndRelationships: any) => {
     const [colorObjs, setColorObjs] = useState({});
     const [colorCount, setColorCount] = useState(0);
 
-    
+
     const handleModalClose = () => {
         setModalOpen(false);
     };
@@ -53,7 +53,7 @@ const useForceGraph = (nodesAndRelationships: any) => {
                 uniqueLabels.push(label[0]);
             }
             setColorCount(colorIndex);
-            obj["name"] = properties?.name || ""
+            obj["name"] = label?.[0] || ""
             obj["properties"] = properties
             obj["parentColor"] = objType[label?.[0]] || "black",
                 obj["childColor"] = ""

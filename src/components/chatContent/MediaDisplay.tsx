@@ -1,6 +1,6 @@
 import { CloseOutlined } from "@ant-design/icons";
 import clsx from "clsx";
-import React, { useEffect, useRef, useState } from "react";
+import React from "react";
 import { Imedia } from "../../types";
 import { GraphViewer, ImageViewer } from "../media";
 import Chart from "../media/Chart";
@@ -22,17 +22,6 @@ const MediaDisplay: React.FC<MediaDisplayProps> = ({
     image: "Image",
   };
 
-  const containerRef = useRef<HTMLDivElement | null>();
-
-  useEffect(() => {
-    if (media?.data && containerRef?.current) {
-      const range = document.createRange();
-      const fragment = range.createContextualFragment(media?.data);
-      containerRef.current.innerHTML = ""; // Clear old content
-      containerRef.current?.appendChild(fragment);
-    }
-  }, [media?.data, containerRef]);
-
   const mediaTypeName = mediaTypeNames[media?.type] || "Unknown Type";
   console.log({ media });
   return (
@@ -53,18 +42,7 @@ const MediaDisplay: React.FC<MediaDisplayProps> = ({
       </div>
       <div className="overflow-y-auto media-display-content-wrap">
         {media?.type === "chart" ? (
-          <div
-            style={{
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-              width: "100%",
-              height: "100%",
-              objectFit: "contain",
-            }}
-          >
-            <div ref={containerRef} />
-          </div>
+          <Chart data={media?.data} />
         ) : media?.type === "graph" ? (
           <GraphViewer graphData={media?.data} />
         ) : media?.type === "image" ? (

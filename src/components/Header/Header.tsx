@@ -10,8 +10,8 @@ export const Header = () => {
   const selectedStateLabel =
     selectedState == "delhi"
       ? "Delhi"
-      : selectedState == "tn"
-      ? "Tamil Nadu"
+      : selectedState == "up"
+      ? "Uttar Pradesh"
       : null;
 
   const handleLogout = () => {

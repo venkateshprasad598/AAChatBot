@@ -40,7 +40,7 @@ export const LoginForm = () => {
             className="w-full"
           >
             <Select placeholder="Select an Assistance">
-              <Option value="tn">Tamil Nadu Alfred Assistance</Option>
+              <Option value="up">Uttar Pradesh Alfred Assistance</Option>
               <Option value="delhi">Delhi Alfred Assistance</Option>
             </Select>
           </Form.Item>

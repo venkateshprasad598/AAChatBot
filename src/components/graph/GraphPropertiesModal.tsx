@@ -59,11 +59,11 @@ const GraphPropertiesModal: React.FC<GraphPropertiesModalProps> = ({
       }
       open={modalOpen}
       onCancel={handleModalClose}
-      footer={
-        <div className="flex justify-end gap-4">
-          <Button onClick={handleShowMore}>Show More</Button>
-        </div>
-      }
+      // footer={
+      //   <div className="flex justify-end gap-4">
+      //     <Button onClick={handleShowMore}>Show More</Button>
+      //   </div>
+      // }
       width={"50%"}
       centered
       closeIcon={<CloseOutlined />}
