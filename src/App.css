@@ -1,4 +1,8 @@
-#root {
+@import url(./assets/css/fonts.css);
+@import url(./assets/css/variable.css);
+@import url(./assets/css/default.css);
+@import url(./assets/css/responsive.css);
+/* #root {
   margin: 0 auto;
   text-align: center;
   background-color: rgb(110, 104, 104);
@@ -31,7 +35,7 @@
   a:nth-of-type(2) .logo {
     animation: logo-spin infinite 20s linear;
   }
-}
+} */
 
 .card {
   padding: 2em;
@@ -39,4 +43,73 @@
 
 .read-the-docs {
   color: #888;
+}
+
+.ml-auto {
+  margin-left: auto;
+}
+.profile-pic {
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+  background-color: #ccc;
+}
+.profile-pic img {
+  border-radius: 100%;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Table Wrapper */
+.table-container {
+  overflow-x: auto; /* Ensure responsiveness on smaller screens */
+}
+
+/* Table Styling */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  font-size: 16px;
+  text-align: left;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+/* Table Header */
+table thead tr {
+  background-color: var(--secluded-green);
+  color: white;
+  font-weight: bold;
+}
+
+/* Header and Cell Borders */
+table th, table td {
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+}
+
+/* Zebra Striping */
+table tbody tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+/* Hover Effect */
+table tbody tr:hover {
+  background-color: #ddd;
+  cursor: pointer;
+}
+
+ol, ul {
+  list-style-type: decimal; /* Or 'circle', 'lower-alpha', etc. */
+  margin-left: 20px;
+  padding-left: 10px;
+  font-size: 14px;
+}
+
+ol li, ul li {
+  font-weight: 600;
+  margin-bottom: 8px;
 }

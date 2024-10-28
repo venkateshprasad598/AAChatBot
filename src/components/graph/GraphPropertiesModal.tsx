@@ -48,6 +48,8 @@ const GraphPropertiesModal: React.FC<GraphPropertiesModalProps> = ({
 }) => {
   let isAvailable = false;
 
+  console.log({ selectedNode: selectedNode });
+
   return (
     <Modal
       title={
@@ -57,11 +59,11 @@ const GraphPropertiesModal: React.FC<GraphPropertiesModalProps> = ({
       }
       open={modalOpen}
       onCancel={handleModalClose}
-      footer={
-        <div className="flex justify-end gap-4">
-          <Button onClick={handleShowMore}>Show More</Button>
-        </div>
-      }
+      // footer={
+      //   <div className="flex justify-end gap-4">
+      //     <Button onClick={handleShowMore}>Show More</Button>
+      //   </div>
+      // }
       width={"50%"}
       centered
       closeIcon={<CloseOutlined />}
@@ -71,7 +73,7 @@ const GraphPropertiesModal: React.FC<GraphPropertiesModalProps> = ({
         <div className="flex flex-col gap-2 mt-1">
           {selectedNode?.properties &&
           Object.keys(selectedNode?.properties).length
-            ? orderedKeys.map((key) => {
+            ? Object.keys(selectedNode?.properties).map((key) => {
                 if (key in selectedNode.properties) {
                   isAvailable = true;
                   return (

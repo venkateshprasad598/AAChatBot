@@ -1,2 +1,3 @@
 export * from "./useBotResponse"
-export * from "./useChat"
+export * from "./useChatDashboard"
+export * from "./useChatMediaViewer"

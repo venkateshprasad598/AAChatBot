@@ -1,8 +1,8 @@
-import axios from "axios";
 import { useEffect, useRef, useState } from "react";
+import { getMoreNodes } from "../../api";
 
 const useForceGraph = (nodesAndRelationships: any) => {
-    const fgRef = useRef<any>();
+    const fgRef = useRef<any>(null);
     const [graphData, setGraphData] = useState({ nodes: [], links: [] });
     const [intGraphData, setIntGraphData] = useState({ nodes: [], links: [] });
     const [selectedNode, setSelectedNode] = useState(null);
@@ -13,6 +13,7 @@ const useForceGraph = (nodesAndRelationships: any) => {
     const [isRefGiven, setRefGiven] = useState(false);
     const [colorObjs, setColorObjs] = useState({});
     const [colorCount, setColorCount] = useState(0);
+
 
     const handleModalClose = () => {
         setModalOpen(false);
@@ -35,10 +36,11 @@ const useForceGraph = (nodesAndRelationships: any) => {
 
         let colorIndex = colorCount;
         const uniqueLabels = [];
-        const objType = {};
+        const objType = {}
 
         const nodes = apiResponse.nodes.map((nodeData) => {
-            const { id, label, properties } = nodeData;
+            const obj = nodeData
+            const { label, properties } = nodeData;
             if (colorIndex === colors.length) colorIndex = 0;
 
             if (
@@ -50,17 +52,14 @@ const useForceGraph = (nodesAndRelationships: any) => {
                 colorIndex++;
                 uniqueLabels.push(label[0]);
             }
-
             setColorCount(colorIndex);
-            return {
-                id,
-                name: properties?.id || "",
-                properties: properties,
-                parentColor: objType[label?.[0]] || "black",
-                childColor: "",
-                collapsed: false,
-                label: label?.[0] || "",
-            };
+            obj["name"] = label?.[0] || ""
+            obj["properties"] = properties
+            obj["parentColor"] = objType[label?.[0]] || "black",
+                obj["childColor"] = ""
+            obj["collapsed"] = false
+            obj["label"] = label?.[0] || ""
+            return obj
         });
 
         const links = apiResponse.relationships;
@@ -68,6 +67,7 @@ const useForceGraph = (nodesAndRelationships: any) => {
     };
 
     const handleNodeClick = (node) => {
+        console.log({ node });
         if (fgRef?.current && !isRefGiven) {
             fgRef?.current?.d3Force("link").distance(120); // Increase the link distance
             setRefGiven(true);
@@ -95,10 +95,11 @@ const useForceGraph = (nodesAndRelationships: any) => {
         const id = node?.id || "";
 
         if (!label || !id) return;
+        const params = {
+            id: id, label: label
+        }
         try {
-            const response = await axios.get(
-                `https://www.tejailabs.in:8506/get-on-click?id=${id}&label=${label}`
-            );
+            const response = await getMoreNodes(params)
 
             if (response?.status === 200) {
                 const responseArr = response?.data;
@@ -157,12 +158,19 @@ const useForceGraph = (nodesAndRelationships: any) => {
     const handleHoveredNode = (e) => setHoveredNode(e);
 
     useEffect(() => {
-        if (nodesAndRelationships?.nodes && nodesAndRelationships?.relationships) {
-            const restructuredRes = transformData(nodesAndRelationships);
-            setGraphData(restructuredRes);
+        const initialGraphData = { ...nodesAndRelationships }
+        if (initialGraphData?.nodes && initialGraphData?.relationships) {
+            const restructuredRes = transformData(initialGraphData);
+            setGraphData(restructuredRes)
             setIntGraphData(restructuredRes);
         }
     }, [nodesAndRelationships]);
+
+    useEffect(() => {
+        if (fgRef?.current) {
+            fgRef?.current?.d3Force("link").distance(120);
+        }
+    }, [graphData])
 
     return {
         fgRef,

@@ -1,12 +1,12 @@
 // components/ChatComponent.tsx
+import { Alert, Button, Input, Spin } from "antd";
 import React, { useState } from "react";
-import { Button, Input, Spin, Alert } from "antd";
-import { useChat } from "./hooks";
+import { useChatDashboard } from "./hooks";
 
 const ChatComponent: React.FC = () => {
   const [userInput, setUserInput] = useState("");
   const { chatMessages, loading, error, handleUserMessage, handleButtonClick } =
-    useChat();
+    useChatDashboard();
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -17,7 +17,10 @@ const ChatComponent: React.FC = () => {
   };
 
   return (
-    <div style={{ padding: "20px", maxWidth: "600px", margin: "0 auto" }}>
+    <div
+      style={{ padding: "20px", maxWidth: "600px", margin: "0 auto" }}
+      className="w-full"
+    >
       {/* Display Chat Messages (User and Bot sequentially) */}
       {chatMessages.map((msg, index) => (
         <div key={index} style={{ marginBottom: "10px" }}>

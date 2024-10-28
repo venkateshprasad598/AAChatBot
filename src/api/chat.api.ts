@@ -16,3 +16,17 @@ export const getBotResponse = async (payload: any) => {
         throw error;
     }
 };
+
+export const getMoreNodes = async (params: any) => {
+    try {
+        const response = await appBaseUrlInstance({
+            method: "GET",
+            url: API_BASE,
+            params: params,
+        });
+        return response;
+    } catch (error) {
+        console.error("Failed to login:", error);
+        throw error;
+    }
+};

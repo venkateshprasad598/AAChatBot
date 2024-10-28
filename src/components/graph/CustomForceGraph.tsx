@@ -116,6 +116,8 @@ const CustomForceGraph = ({
   return (
     <ForceGraph2D
       ref={fgRef}
+      width={685}
+      height={600}
       graphData={graphData}
       nodeLabel="name"
       linkLabel="name"
