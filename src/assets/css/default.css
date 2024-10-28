@@ -63,28 +63,34 @@ main {
 .dark .msg-card .text-nose,
 .dark .msg-card .btn-green-border,
 .dark .anticon,
-.dark .show-box .text-nose{
+.dark .show-box .text-nose {
   color: var(--body);
 }
 .dark .msg-card .show-detail-head:hover,
 .dark .show-box,
 .dark .msg-card .profile-icon h5,
 .dark .auth-card .ant-col label,
-.dark .auth-section .auth-card .ant-select .ant-select-selector, 
+.dark .auth-section .auth-card .ant-select .ant-select-selector,
 .dark .auth-section .auth-card .ant-input,
-.dark .auth-section .auth-card .ant-select .ant-select-selector .ant-select-selection-placeholder,
-.dark .auth-section .auth-card .ant-select .ant-select-selection-item, .auth-section .auth-card .ant-input,
+.dark
+  .auth-section
+  .auth-card
+  .ant-select
+  .ant-select-selector
+  .ant-select-selection-placeholder,
+.dark .auth-section .auth-card .ant-select .ant-select-selection-item,
+.auth-section .auth-card .ant-input,
 .dark .auth-section .auth-card .ant-select-arrow,
-.dark .auth-section .auth-card .anticon{
+.dark .auth-section .auth-card .anticon {
   color: var(--nose);
 }
-.dark .send-btn{
+.dark .send-btn {
   background-color: var(--body);
 }
 .dark .close-icon:hover {
   background-color: var(--nose);
 }
-.dark .auth-card{
+.dark .auth-card {
   background-color: transparent;
 }
 /* bg gradiant */
@@ -178,18 +184,18 @@ main {
 .media-display-content-wrap {
   height: calc(100vh - 117px);
 }
-.auth-section{
+.auth-section {
   width: calc(100% + 30px);
-  margin-left:-15px;
+  margin-left: -15px;
 }
-.auth-card{
+.auth-card {
   backdrop-filter: blur(10px);
 }
-.auth-card form{
+.auth-card form {
   backdrop-filter: invert(1);
 }
-.auth-card .ant-col label{
-  color: var(--white);
+.auth-card .ant-col label {
+  color: var(--nose);
   font-size: 16px;
   letter-spacing: 1px;
 }
@@ -204,41 +210,57 @@ main {
   bottom: -60px;
 }
 /* select style css start */
-
 .auth-section .auth-card .ant-select .ant-select-selector,
 .auth-section .auth-card .ant-input {
-  border: 1px solid #ffffff1a;
-  background: rgba(255, 255, 255, 0.07);
+  border: 1px solid var(--nose);
+  background: var(--body);
   height: inherit;
-  color: var(--white);
+  color: var(--nose);
 }
-.auth-section .auth-card .ant-select .ant-select-selector .ant-select-selection-placeholder,
+.auth-section
+  .auth-card
+  .ant-select
+  .ant-select-selector
+  .ant-select-selection-placeholder,
 .auth-section .auth-card .ant-select .ant-select-selection-item,
-.auth-section .auth-card .ant-input{
-  color: var(--white);
+.auth-section .auth-card .ant-input {
+  color: var(--nose);
   font-size: 16px;
   letter-spacing: 0.5px;
 }
 .auth-section .auth-card .ant-select,
-.auth-section .auth-card .ant-select-selector .ant-select-selection-search-input,
-.auth-section .auth-card .ant-input{
+.auth-section
+  .auth-card
+  .ant-select-selector
+  .ant-select-selection-search-input,
+.auth-section .auth-card .ant-input {
   height: 45px;
 }
-.auth-section .auth-card .ant-select-single.ant-select-focused.ant-select-outlined:not(.ant-select-disabled):not(.ant-select-customize-input):not(.ant-pagination-size-changer) .ant-select-selector,
-.auth-section .auth-card .ant-input{
+.auth-section
+  .auth-card
+  .ant-select-single.ant-select-focused.ant-select-outlined:not(
+    .ant-select-disabled
+  ):not(.ant-select-customize-input):not(.ant-pagination-size-changer)
+  .ant-select-selector,
+.auth-section .auth-card .ant-input {
   /* background-color: transparent; */
   box-shadow: unset;
-  border: 1px solid #ffffff1a;
+  border: 1px solid var(--nose);
   outline: 0;
 }
-.auth-section .auth-card :where(.css-dev-only-do-not-override-ojluqj).ant-select-outlined:not(.ant-select-disabled):not(.ant-select-customize-input):not(.ant-pagination-size-changer):hover .ant-select-selector,
-.auth-section .auth-card .ant-input:hover{
-  border: 1px solid #ffffff1a;
+.auth-section
+  .auth-card
+  :where(.css-dev-only-do-not-override-ojluqj).ant-select-outlined:not(
+    .ant-select-disabled
+  ):not(.ant-select-customize-input):not(.ant-pagination-size-changer):hover
+  .ant-select-selector,
+.auth-section .auth-card .ant-input:hover {
+  border: 1px solid var(--nose);
   background-color: transparent;
   box-shadow: none;
   outline: none;
 }
-.auth-section .auth-card .ant-select-arrow{
-  color:var(--white);
+.auth-section .auth-card .ant-select-arrow {
+  color: var(--nose);
 }
 /* select style css end */

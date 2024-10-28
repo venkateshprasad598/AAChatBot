@@ -13,15 +13,15 @@ export const LoginForm = () => {
   };
 
   return (
-    <div className="flex items-center justify-center h-screen min-h-[550px] bg-cover bg-no-repeat bg-center auth-section overflow-y-auto px-3 px-md-0">
-      <div className="relative auth-card md:max-w-[500px] w-full min-h-[300px] md:min-h-[400px] px-0 md:px-0 bg-white">
+    <div className="flex items-center justify-center h-screen min-h-[550px] bg-cover bg-no-repeat bg-center auth-section overflow-y-auto ">
+      <div className="relative auth-card md:max-w-[500px] w-full min-h-[300px] md:min-h-[400px] px-3 md:px-0">
         <Form
           name="loginForm"
           layout="vertical"
           onFinish={onFinish}
-          className="shadow-lg rounded-lg w-full h-full min-h-[inherit] bg-[#ffffff21] border border-x-2 border-y-2 border-[#ffffff1a] px-[15px] py-[15px] md:px-[50px] md:py-[50px] flex items-center flex-col justify-center"
+          className="shadow-lg rounded-lg w-full h-full min-h-[inherit] bg-white border border-x-2 border-y-2 border-[#ffffff1a] px-[15px] py-[15px] md:px-[50px] md:py-[50px] flex items-center flex-col justify-center"
         >
-          <h1 className="text-center text-[18px] 2xl:text-[24px] font-bold text-white tracking-widest mb-6">
+          <h1 className="text-center text-[18px] 2xl:text-[24px] font-bold text-nose tracking-widest mb-6">
             Alfred Assistance
           </h1>
           <Form.Item
