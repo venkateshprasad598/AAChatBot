@@ -127,11 +127,11 @@ const CustomForceGraph = ({
       maxZoom={10}
       zoom={10}
       showNavInfo={true}
-      nodeRelSize={10}
-      nodeResolution={10}
-      linkResolution={10}
-      linkDirectionalArrowLength={6}
-      linkDirectionalArrowRelPos={1}
+      nodeRelSize={5}
+      nodeResolution={5}
+      linkResolution={5}
+      linkDirectionalArrowLength={3}
+      linkDirectionalArrowRelPos={0}
       onNodeHover={handleHoveredNode}
       nodeCanvasObject={drawNode}
       linkCanvasObjectMode={() => "after"}

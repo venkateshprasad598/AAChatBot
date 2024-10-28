@@ -161,6 +161,17 @@ const useForceGraph = (nodesAndRelationships: any) => {
         const initialGraphData = { ...nodesAndRelationships }
         if (initialGraphData?.nodes && initialGraphData?.relationships) {
             const restructuredRes = transformData(initialGraphData);
+
+            const newInitUniqueLabels = restructuredRes?.uniqueLabels || [];
+            const intColorObjs = restructuredRes?.objType || {};
+            const initUniqueLabels = newInitUniqueLabels.filter(
+                (data) => !uniqueLabels.includes(data)
+            );
+
+            setSelectedLabels([...selectedLabels, ...initUniqueLabels]);
+            setUniqueLabels([...uniqueLabels, ...initUniqueLabels]);
+            setColorObjs({ ...colorObjs, ...intColorObjs });
+
             setGraphData(restructuredRes)
             setIntGraphData(restructuredRes);
         }
@@ -169,6 +180,7 @@ const useForceGraph = (nodesAndRelationships: any) => {
     useEffect(() => {
         if (fgRef?.current) {
             fgRef?.current?.d3Force("link").distance(120);
+            fgRef?.current?.d3Force('charge').strength(-10);
         }
     }, [graphData])
 

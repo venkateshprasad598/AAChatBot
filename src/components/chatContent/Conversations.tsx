@@ -64,12 +64,6 @@ const Conversations = ({
                   {message.markdown_text && (
                     <ResponseMessage userQuestion={message.markdown_text} />
                   )}
-                  {/* {message.chart_html && (
-                    <div
-                      className="chart-container mb-[15px]"
-                      dangerouslySetInnerHTML={{ __html: message.chart_html }}
-                    />
-                  )} */}
 
                   {message?.chart_html && (
                     <GraphViewer
