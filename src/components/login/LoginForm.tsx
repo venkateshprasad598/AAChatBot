@@ -13,8 +13,8 @@ export const LoginForm = () => {
   };
 
   return (
-    <div className="flex items-center justify-center h-screen min-h-[550px] bg-cover bg-no-repeat bg-center auth-section overflow-y-auto ">
-      <div className="relative auth-card md:max-w-[500px] w-full min-h-[300px] md:min-h-[400px] px-3 md:px-0 bg-white">
+    <div className="flex items-center justify-center h-screen min-h-[550px] bg-cover bg-no-repeat bg-center auth-section overflow-y-auto px-3 px-md-0">
+      <div className="relative auth-card md:max-w-[500px] w-full min-h-[300px] md:min-h-[400px] px-0 md:px-0 bg-white">
         <Form
           name="loginForm"
           layout="vertical"

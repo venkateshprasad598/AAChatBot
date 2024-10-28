@@ -11,7 +11,7 @@ export const PromptMessage: React.FC<PromptMessageProps> = ({
   userQuestion,
 }) => {
   return (
-    <div className="w-full h-full mb-[15px]">
+    <div className="w-full h-full mb-[15px] msg-card">
       <div
         className="group relative inline-flex items-start gap-2 bg-gradient-to-b from-bg-300 from-50% to-bg-400 rounded-xl px-3 py-3
         break-words text-text-200 transition-all max-w-[100%] shadow-[0_2px_16px_rgba(0,0,0,0.025)] min-w-[16ch] min-h-[50px]"

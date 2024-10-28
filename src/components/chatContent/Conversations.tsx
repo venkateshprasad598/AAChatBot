@@ -36,7 +36,7 @@ const Conversations = ({
   if (chatMessages.length === 0) {
     return (
       <div className="flex items-center justify-center content-area">
-        <h1 className="md:text-2xl xl:text-3xl 2xl:text-4xl font-bold text-gray-700">
+        <h1 className="md:text-2xl xl:text-3xl 2xl:text-4xl font-bold text-nose">
           Hello, how can I help?
         </h1>
       </div>
@@ -58,7 +58,7 @@ const Conversations = ({
 
         if (message.sender === "bot") {
           return (
-            <div className="w-full h-full mb-[15px]">
+            <div className="w-full h-full mb-[15px] msg-card">
               <div className="bg-white px-3 py-3 rounded-xl max-w-[100%] shadow-[0_2px_16px_rgba(0,0,0,0.025)] min-w-[16ch] min-h-[5ch] border replay-msg text-sm text-nose tracking-wider flex flex-col gap-3">
                 <div key={index} className="bot-response flex flex-col gap-3">
                   {message.markdown_text && (

@@ -34,7 +34,7 @@ const MediaDisplay: React.FC<MediaDisplayProps> = ({
       <div className="px-4 py-1 border bottom-1 border-t-0 border-l-0 border-r-0 flex items-center gap-3 sticky top-0 show-box-header h-[50px]">
         <h4 className="mb-0 font-medium text-md">{mediaTypeName}</h4>
         <button
-          className="border p-2 rounded hover-bg transition-all ease-out duration-150 ml-auto flex items-center justify-center"
+          className="border p-2 rounded close-icon transition-all ease-out duration-150 ml-auto flex items-center justify-center"
           onClick={hideBox}
         >
           <CloseOutlined />
