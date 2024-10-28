@@ -161,7 +161,7 @@ main {
   backdrop-filter: invert(1);
 }
 .auth-card .ant-col label{
-  color: var(--white);
+  color: var(--nose);
   font-size: 16px;
   letter-spacing: 1px;
 }
@@ -178,15 +178,15 @@ main {
 /* select style css start */
 .auth-section .auth-card .ant-select .ant-select-selector,
 .auth-section .auth-card .ant-input {
-  border: 1px solid #ffffff1a;
-  background: rgba(255, 255, 255, 0.07);
+  border: 1px solid var(--nose);
+  background: var(--body);
   height: inherit;
-  color: var(--white);
+  color: var(--nose);
 }
 .auth-section .auth-card .ant-select .ant-select-selector .ant-select-selection-placeholder,
 .auth-section .auth-card .ant-select .ant-select-selection-item,
 .auth-section .auth-card .ant-input{
-  color: var(--white);
+  color: var(--nose);
   font-size: 16px;
   letter-spacing: 0.5px;
 }
@@ -199,17 +199,17 @@ main {
 .auth-section .auth-card .ant-input{
   /* background-color: transparent; */
   box-shadow: unset;
-  border: 1px solid #ffffff1a;
+  border: 1px solid var(--nose);
   outline: 0;
 }
 .auth-section .auth-card :where(.css-dev-only-do-not-override-ojluqj).ant-select-outlined:not(.ant-select-disabled):not(.ant-select-customize-input):not(.ant-pagination-size-changer):hover .ant-select-selector,
 .auth-section .auth-card .ant-input:hover{
-  border: 1px solid #ffffff1a;
+  border: 1px solid var(--nose);
   background-color: transparent;
   box-shadow: none;
   outline: none;
 }
 .auth-section .auth-card .ant-select-arrow{
-  color:var(--white);
+  color:var(--nose);
 }
 /* select style css end */
